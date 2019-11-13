@@ -1,27 +1,95 @@
-# NgxProgress
+<div style="text-align: center">
+  <h2>@kken94/ngx-progress</h2>
+  <br />
+  A powerfull wrapper of the best progressbar existing -> [@ngx-loading-bar/core](./packages/core/README.md)
+  <br /><br />
+</div>
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.16.
+## Demo
+- demo: 
 
-## Development server
+Table of contents
+=================
+  * [Getting started](#getting-started)
+    * [0. Improvements](#0-improvements)
+    * [1. Install](#1-install)
+    * [2. Import the installed libraries](#2-import-the-installed-libraries)
+    * [3. Include `ngx-progress` where you want](#3-include-ngx-loading-bar-in-your-app-component)
+  * [Emitters](#manage-loading-service)
+  * [Manage loading service](#manage-loading-service)
+  * [Credits](#credits)
+  
+  ## Getting started
+  
+#### 0. Improvements:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Some improvements:<br /><br />
+• Start and finish emitters<br />
+• Overlay<br />
+• Only one (by choice) module import<br />
+• New requests don't reset bar progress (when others are in progress)<br /><br />
 
-## Code scaffolding
+#### 1. Install:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+  npm install @kken94/ngx-progress --save
+```
+or
+```bash
+  yarn add @kken94/ngx-progress
+```
 
-## Build
+#### 2. Import the installed library:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Just import a single Module from following:
 
-## Running unit tests
+<div style="margin-left: 5px;">
+• NgxProgressHttpOnlyModule<br />
+• NgxProgressOnlyRouterModule<br />
+• NgxProgressOnlyBarModule<br />
+• NgxProgressModule -> Progressbar will be shown when you perform a http request or when you change angular route or you can manage it by yourself<br /><br />
+</div>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+example:
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-## Running end-to-end tests
+import { NgxProgressModule } from '@kken94/ngx-progress';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+import { AppComponent } from './app';
 
-## Further help
+@NgModule({
+  ...
+  imports: [
+    ...
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    NgxProgressModule
+  ],
+})
+export class AppModule {}
+```
+#### 3. Include `ngx-progress` where you want:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app',
+  template: `
+    ...
+    <ngx-progress></ngx-progress>
+  `,
+})
+export class AppComponent {}
+```
+## Customize `ngx-progress`
+Overlay...<br />
+For customization and ignoring request see:<br />
+https://github.com/aitboudad/ngx-loading-bar#3-include-ngx-loading-bar-in-your-app-component
+
+# Credits 
+
+- [@ngx-loading-bar/core](./packages/core/README.md)
+- https://github.com/aitboudad/ngx-loading-bar
