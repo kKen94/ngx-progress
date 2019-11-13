@@ -1,0 +1,43 @@
+{
+  "name": "ngx-progress",
+  "version": "0.0.1",
+  "scripts": {
+    "start:demo": "ng serve demo --open --port=3310",
+    "build:demo": "ng build demo --prod",
+    "build:lib": "ng build lib",
+    "lint": "ng lint",
+    "package:lib": "yarn run build:lib && yarn run copy:files && yarn run npm:pack",
+    "copy:files": "yarn run copy:readme && yarn run copy:license",
+    "copy:license": "copy .\\LICENSE.md .\\dist\\ngx-progress",
+    "copy:readme": "copy .\\README.md .\\dist\\ngx-progress",
+    "npm:pack": "cd dist/ngx-progress && npm pack"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.13",
+    "@angular/common": "~8.2.13",
+    "@angular/compiler": "~8.2.13",
+    "@angular/core": "~8.2.13",
+    "@angular/forms": "~8.2.13",
+    "@angular/platform-browser": "~8.2.13",
+    "@angular/platform-browser-dynamic": "~8.2.13",
+    "@angular/router": "~8.2.13",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.18",
+    "@angular-devkit/build-ng-packagr": "~0.803.18",
+    "@angular/cli": "~8.3.16",
+    "@angular/compiler-cli": "~8.2.13",
+    "@angular/language-service": "~8.2.13",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "ng-packagr": "^5.4.0",
+    "ts-node": "~7.0.0",
+    "tsickle": "^0.37.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  }
+}
