@@ -873,6 +873,13 @@
     tree-kill "1.2.1"
     webpack-sources "1.4.3"
 
+"@ngx-loading-bar/core@^4.2.0":
+  version "4.2.0"
+  resolved "http://verdaccio.ricambio.net:4873/@ngx-loading-bar%2fcore/-/core-4.2.0.tgz#cf0cc209eb967bd7625c2cec565841890cd5e17e"
+  integrity sha512-sfVmsDoLr9zI7ylzPct4wefi6zWBPyekQIhJVhME3h9sPh8S+BHy5loKgUqiZR3YduRNr8boLh4GkHpL3eXEPg==
+  dependencies:
+    tslib "^1.7.1"
+
 "@schematics/angular@8.3.18":
   version "8.3.18"
   resolved "http://verdaccio.ricambio.net:4873/@schematics%2fangular/-/angular-8.3.18.tgz#314e17ba21925895e43e3c0ac864d9d98a30333d"
@@ -7224,7 +7231,7 @@ tsickle@^0.37.0:
   resolved "http://verdaccio.ricambio.net:4873/tsickle/-/tsickle-0.37.1.tgz#2f8a87c1b15766e866457bd06fb6c0e0d84eed09"
   integrity sha512-0GwgOJEnsmRsrONXCvcbAWY0CvdqF3UugPVoupUpA8Ul0qCPTuqqq0ou/hLqtKZOyyulzCP6MYRjb9/J1g9bJg==
 
-tslib@1.10.0, tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.10.0, tslib@^1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "http://verdaccio.ricambio.net:4873/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
