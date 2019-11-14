@@ -1,6 +1,6 @@
 {
   "name": "ngx-progress",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start:demo": "ng serve demo --open --port=3310",
     "build:demo": "ng build demo --prod",
@@ -15,13 +15,18 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.13",
+    "@angular/cdk": "~8.2.3",
     "@angular/common": "~8.2.13",
     "@angular/compiler": "~8.2.13",
     "@angular/core": "~8.2.13",
+    "@angular/flex-layout": "^8.0.0-beta.27",
     "@angular/forms": "~8.2.13",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "hammerjs": "^2.0.8",
+    "normalize.css": "^8.0.1",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

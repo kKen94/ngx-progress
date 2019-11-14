@@ -1,0 +1,14 @@
+:host {
+  .overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); /* Black background with opacity */
+    z-index: 2;
+  }
+}

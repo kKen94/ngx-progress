@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@include mat-core();
+
+$candy-app-primary: mat-palette($mat-light-blue, A700);
+$candy-app-accent:  mat-palette($mat-green, 300);
+$candy-app-warn:  mat-palette($mat-red, 700);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+.mat-form-field-infix { padding: 0.4em 0 !important;}
+.mat-form-field-label-wrapper { top: -1.5em !important;}
+.mat-form-field-appearance-outline .mat-form-field-wrapper { margin: 0 !important; }
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Sans-serif, serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a, p, span {
+  color: #262626;
+  text-decoration: none !important;
+}

@@ -1,0 +1,90 @@
+/* Make clicks pass-through */
+
+:host {
+  position: relative;
+  display: block;
+
+  &.loading-bar-fixed > div {
+    .bar {
+      position: fixed;
+    }
+
+    &#loading-bar-spinner {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+
+      [dir="rtl"] & {
+        right: 10px;
+        left: unset;
+      }
+    }
+
+    .peg {
+      display: block;
+    }
+  }
+
+  > div {
+    pointer-events: none;
+    transition: 350ms linear all;
+    color: #29d;
+
+    .bar {
+      transition: width 350ms;
+
+      background: #29d;
+      position: absolute;
+      z-index: 10002;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-bottom-right-radius: 1px;
+      border-top-right-radius: 1px;
+
+      [dir="rtl"] & {
+        right: 0;
+        left: unset;
+      }
+    }
+
+    /* Fancy blur effect */
+    .peg {
+      display: none;
+      position: absolute;
+      width: 70px;
+      right: 0;
+      top: 0;
+      height: 2px;
+      opacity: .45;
+      box-shadow: 1px 0 6px 1px;
+      color: inherit;
+      border-radius: 100%;
+    }
+
+    // loading-bar-spinner
+    &#loading-bar-spinner {
+      display: block;
+      position: absolute;
+      z-index: 10002;
+      top: 5px;
+      left: 0;
+      .spinner-icon {
+        width: 14px;
+        height: 14px;
+
+        border: solid 2px transparent;
+        border-top-color: inherit;
+        border-left-color: inherit;
+        border-radius: 50%;
+        animation: loading-bar-spinner 400ms linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

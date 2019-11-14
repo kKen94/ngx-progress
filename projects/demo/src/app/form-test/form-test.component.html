@@ -1,0 +1,24 @@
+<div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="box padding-box" fxLayout="column" fxLayoutAlign="space-around center">
+
+    <img class="logo" alt="logo" src="../../assets/man.png">
+
+    <span style="font-size: 24px;">Login</span>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="margin-top: -30px;">
+      <mat-label>Password</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <div style="width: 100%;" fxLayout="row" fxLayoutAlign="space-between center">
+      <a class="link primary-color" routerLink="/logan"><span style="font-weight: bold; color: #0984e3">-> Logan <-</span></a>
+      <button mat-flat-button color="primary" (click)="fakeRequest()"><span style="color: #ffffff">Fake http 3 seconds request</span></button>
+    </div>
+
+  </div>
+</div>

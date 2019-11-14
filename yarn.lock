@@ -126,6 +126,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@~8.2.3":
+  version "8.2.3"
+  resolved "http://verdaccio.ricambio.net:4873/@angular%2fcdk/-/cdk-8.2.3.tgz#16b96ffa935cbf5a646757ecaf2b19c434678f72"
+  integrity sha512-ZwO5Sn720RA2YvBqud0JAHkZXjmjxM0yNzCO8RVtRE9i8Gl26Wk0j0nQeJkVm4zwv2QO8MwbKUKGTMt8evsokA==
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~8.3.16":
   version "8.3.18"
   resolved "http://verdaccio.ricambio.net:4873/@angular%2fcli/-/cli-8.3.18.tgz#aba2652ef6aec28a14fdeb0268eb167691733e95"
@@ -189,6 +198,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/flex-layout@^8.0.0-beta.27":
+  version "8.0.0-beta.27"
+  resolved "http://verdaccio.ricambio.net:4873/@angular%2fflex-layout/-/flex-layout-8.0.0-beta.27.tgz#a697d5a90e6d04c06b02ee872f88f384d1723f7c"
+  integrity sha512-qmpvQPesU4ZQ56IscwgmVRpK2UnyV+gwvXUql7TMv0QV215hLcHczjGsrKkLfW2By5E7XEyDat9br72uVXcPMw==
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/forms@~8.2.13":
   version "8.2.13"
   resolved "http://verdaccio.ricambio.net:4873/@angular%2fforms/-/forms-8.2.13.tgz#8bb2a5d3e0e8adc17e2bcc94b07d3a56c557ed63"
@@ -200,6 +216,13 @@
   version "8.2.13"
   resolved "http://verdaccio.ricambio.net:4873/@angular%2flanguage-service/-/language-service-8.2.13.tgz#b8eb98c581f13b6f749cfb55916cdc2e047f1900"
   integrity sha512-uVkqC5oxul6Jqyxzy0o4DN1TpmcmUWIi7WnDBu+aJVQFp/kqxmkNuJQvugdouxlIYdHC/SwLeVnBIplRjGH5cw==
+
+"@angular/material@^8.2.3":
+  version "8.2.3"
+  resolved "http://verdaccio.ricambio.net:4873/@angular%2fmaterial/-/material-8.2.3.tgz#16543e4e06a3fde2651a25cfe126e88e714ae105"
+  integrity sha512-SOczkIaqes+r+9XF/UUiokidfFKBpHkOPIaFK857sFD0FBNPvPEpOr5oHKCG3feERRwAFqHS7Wo2ohVEWypb5A==
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~8.2.13":
   version "8.2.13"
@@ -3495,6 +3518,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "http://verdaccio.ricambio.net:4873/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "http://verdaccio.ricambio.net:4873/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "http://verdaccio.ricambio.net:4873/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -5080,6 +5108,11 @@ normalize-url@^4.1.0:
   resolved "http://verdaccio.ricambio.net:4873/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
 
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "http://verdaccio.ricambio.net:4873/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
+
 npm-bundled@^1.0.1:
   version "1.0.6"
   resolved "http://verdaccio.ricambio.net:4873/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
@@ -5471,6 +5504,11 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "http://verdaccio.ricambio.net:4873/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "http://verdaccio.ricambio.net:4873/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"
@@ -7224,7 +7262,7 @@ tsickle@^0.37.0:
   resolved "http://verdaccio.ricambio.net:4873/tsickle/-/tsickle-0.37.1.tgz#2f8a87c1b15766e866457bd06fb6c0e0d84eed09"
   integrity sha512-0GwgOJEnsmRsrONXCvcbAWY0CvdqF3UugPVoupUpA8Ul0qCPTuqqq0ou/hLqtKZOyyulzCP6MYRjb9/J1g9bJg==
 
-tslib@1.10.0, tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.10.0, tslib@^1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "http://verdaccio.ricambio.net:4873/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==

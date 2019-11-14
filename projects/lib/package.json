@@ -1,8 +1,37 @@
 {
   "name": "ngx-progress",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kKen94/ngx-progress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kKen94/ngx-progress/issues",
+    "email": "nicola.taddei.94@gmail.com"
+  },
+  "author": {
+    "name": "Nicola Taddei",
+    "email": "nicola.taddei.94@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "ng2",
+    "ng4",
+    "ng5",
+    "ng6",
+    "ng7",
+    "ng8",
+    "ng9",
+    "ngx",
+    "loader",
+    "progressbar",
+    "spinner",
+    "interceptor"
+  ],
   "peerDependencies": {
     "@angular/common": "^8.2.13",
-    "@angular/core": "^8.2.13"
+    "@angular/core": "^8.2.13",
+    "rxjs": "~6.5.3"
   }
 }
