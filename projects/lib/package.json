@@ -1,7 +1,9 @@
 {
-  "name": "ngx-progress",
+  "name": "@kken94/ngx-progress",
+  "description": "Powerful progress bar for Angular",
   "version": "0.0.1",
   "license": "MIT",
+  "homepage": "https://github.com/kKen94/ngx-progress",
   "repository": {
     "type": "git",
     "url": "https://github.com/kKen94/ngx-progress.git"
@@ -14,6 +16,7 @@
     "name": "Nicola Taddei",
     "email": "nicola.taddei.94@gmail.com"
   },
+  "private": false,
   "keywords": [
     "angular",
     "ng2",
@@ -24,6 +27,8 @@
     "ng8",
     "ng9",
     "ngx",
+    "typescript",
+    "library",
     "loader",
     "progressbar",
     "spinner",
