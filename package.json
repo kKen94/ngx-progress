@@ -8,9 +8,9 @@
     "lint": "ng lint",
     "package:lib": "yarn run build:lib && yarn run copy:files && yarn run npm:pack",
     "copy:files": "yarn run copy:readme && yarn run copy:license",
-    "copy:license": "copy .\\LICENSE.md .\\dist\\ngx-progress",
-    "copy:readme": "copy .\\README.md .\\dist\\ngx-progress",
-    "npm:pack": "cd dist/ngx-progress && npm pack"
+    "copy:license": "copy .\\LICENSE.md .\\dist\\lib",
+    "copy:readme": "copy .\\README.md .\\dist\\lib",
+    "npm:pack": "cd dist/lib && npm pack && npm publish --access public"
   },
   "private": true,
   "dependencies": {
