@@ -6,11 +6,11 @@
     "build:demo": "ng build demo --prod",
     "build:lib": "ng build lib",
     "lint": "ng lint",
-    "package:lib": "yarn run build:lib && yarn run copy:files && yarn run npm:pack",
+    "package:lib": "yarn run build:lib && yarn run copy:files && yarn run publish",
     "copy:files": "yarn run copy:readme && yarn run copy:license",
     "copy:license": "copy .\\LICENSE.md .\\dist\\lib",
     "copy:readme": "copy .\\README.md .\\dist\\lib",
-    "npm:pack": "cd dist/lib && npm pack && yarn publish"
+    "publish": "cd dist/lib && yarn publish --access public"
   },
   "private": true,
   "dependencies": {
