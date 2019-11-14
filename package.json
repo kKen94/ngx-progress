@@ -10,7 +10,7 @@
     "copy:files": "yarn run copy:readme && yarn run copy:license",
     "copy:license": "copy .\\LICENSE.md .\\dist\\lib",
     "copy:readme": "copy .\\README.md .\\dist\\lib",
-    "npm:pack": "cd dist/lib && npm pack && npm publish --access public"
+    "npm:pack": "cd dist/lib && npm pack && yarn publish"
   },
   "private": true,
   "dependencies": {
