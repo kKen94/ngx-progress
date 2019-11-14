@@ -8,12 +8,12 @@ import { NgxProgressService } from './ngx-progress.service';
 })
 export class NgxProgressComponent {
 
-  @Input() barColor: string;
-  @Input() fixed = false;
+  @Input() barColor = '#0984e3';
   @Input() spinner = false;
   @Input() heigth = '1px';
-  @Input() spinnerDiameter: any;
+  @Input() spinnerDiameter = '5px';
   @Input() initialValue = null;
+  @Input() overlay = true;
 
   constructor(public progressService: NgxProgressService) {}
 }

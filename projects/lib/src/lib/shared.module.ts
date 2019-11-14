@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { NgxProgressComponent } from './ngx-progress.component';
+import { VendorModule } from './vendor-component/vendor.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    LoadingBarModule,
+    VendorModule,
   ],
   declarations: [NgxProgressComponent],
   exports: [
     NgxProgressComponent,
     CommonModule,
-    LoadingBarModule,
+    VendorModule,
   ],
 })
 export class SharedModule {}

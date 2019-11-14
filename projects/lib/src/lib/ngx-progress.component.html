@@ -1,9 +1,8 @@
-<div class="overlay" *ngIf="progressService.isStarted"></div>
-<ngx-loading-bar
-  [fixed]="fixed"
+<div class="overlay" *ngIf="progressService.isStarted && overlay"></div>
+<vendor-bar
   [includeSpinner]="spinner"
   [height]="heigth"
   [color]="barColor"
   [diameter]="spinnerDiameter"
   [value]="initialValue"
-></ngx-loading-bar>
+></vendor-bar>

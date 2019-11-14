@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { LoadingBarService } from '@ngx-loading-bar/core';
+import { VendorService } from './vendor-component/vendor.service';
 
 @Injectable()
 export class NgxProgressService {
@@ -22,7 +22,7 @@ export class NgxProgressService {
   progressCount = 0;
 
   constructor(
-    private vendorBarService: LoadingBarService,
+    private vendorBarService: VendorService,
   ) { }
 
   /**

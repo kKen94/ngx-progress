@@ -4,8 +4,5 @@
   "peerDependencies": {
     "@angular/common": "^8.2.13",
     "@angular/core": "^8.2.13"
-  },
-  "dependencies": {
-    "@ngx-loading-bar/core": "^4.2.0"
   }
 }

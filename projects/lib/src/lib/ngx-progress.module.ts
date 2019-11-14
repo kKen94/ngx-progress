@@ -89,11 +89,11 @@ const initRouter = (router: Router, progressService: NgxProgressService) => {
     }
 
     if (event instanceof NavigationStart) {
-      this.progressService.start();
+      progressService.start();
     }
 
     if ((event instanceof NavigationError || event instanceof NavigationEnd || event instanceof NavigationCancel)) {
-      this.progressService.end();
+      progressService.end();
     }
   });
 };

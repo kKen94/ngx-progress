@@ -12,6 +12,8 @@
       "element",
       "lib",
       "kebab-case"
-    ]
+    ],
+    "semicolon": false,
+    "ban-types": false
   }
 }

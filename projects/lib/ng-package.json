@@ -2,12 +2,6 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/lib",
   "lib": {
-    "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "@ngx-loading-bar/core": "@ngx-loading-bar/core"
-    }
-  },
-  "whitelistedNonPeerDependencies": [
-    "@ngx-loading-bar/core"
-  ]
+    "entryFile": "src/public-api.ts"
+  }
 }
