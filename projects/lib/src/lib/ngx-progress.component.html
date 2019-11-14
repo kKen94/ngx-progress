@@ -1,8 +1,10 @@
-<div class="overlay" *ngIf="progressService.isStarted && overlay"></div>
-<vendor-bar
-  [includeSpinner]="spinner"
-  [height]="heigth"
-  [color]="barColor"
-  [diameter]="spinnerDiameter"
-  [value]="initialValue"
-></vendor-bar>
+<ng-container *ngIf="show">
+  <div class="overlay" *ngIf="progressService.isStarted && overlay"></div>
+  <vendor-bar
+    [includeSpinner]="spinner"
+    [height]="heigth"
+    [color]="barColor"
+    [diameter]="spinnerDiameter"
+    [value]="initialValue"
+  ></vendor-bar>
+</ng-container>

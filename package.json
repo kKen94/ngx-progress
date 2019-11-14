@@ -1,6 +1,6 @@
 {
   "name": "ngx-progress",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start:demo": "ng serve demo --open --port=3310",
     "build:demo": "ng build demo --prod",

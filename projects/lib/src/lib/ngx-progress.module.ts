@@ -14,7 +14,6 @@ import { SharedModule } from './shared.module';
   ],
   exports: [NgxProgressComponent],
   providers: [
-    NgxProgressService,
     { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
   ]
 })
@@ -28,9 +27,6 @@ export class NgxProgressHttpOnlyModule {}
     RouterModule,
   ],
   exports: [NgxProgressComponent],
-  providers: [
-    NgxProgressService,
-  ]
 })
 export class NgxProgressOnlyRouterModule {
   constructor(router: Router, private progressService: NgxProgressService) {
@@ -47,7 +43,6 @@ export class NgxProgressOnlyRouterModule {
   ],
   exports: [NgxProgressComponent],
   providers: [
-    NgxProgressService,
     { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
   ]
 })
@@ -64,9 +59,6 @@ export class NgxProgressModule {
     SharedModule,
   ],
   exports: [NgxProgressComponent],
-  providers: [
-    NgxProgressService,
-  ]
 })
 export class NgxProgressOnlyBarModule {}
 

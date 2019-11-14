@@ -9,6 +9,7 @@ import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/ma
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoganComponent } from './logan/logan.component';
 import { HttpClientModule } from '@angular/common/http';
+import { fakeHttpProvider } from './fake-http.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [fakeHttpProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

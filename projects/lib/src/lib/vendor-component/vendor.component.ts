@@ -11,9 +11,9 @@ import { VendorService } from './vendor.service';
 export class VendorComponent {
   @Input() includeSpinner = true;
   @Input() includeBar = true;
-  @Input() color;
-  @Input() height;
-  @Input() diameter;
+  @Input() color: string;
+  @Input() height: string;
+  @Input() diameter: string;
   @Input() value = null;
 
   constructor(public loader: VendorService) {}
