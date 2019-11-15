@@ -1,7 +1,7 @@
 dist: trusty
 language: node_js
 node_js:
-  - "10"
+  - "12.13.0"
 
 os:
   - linux
@@ -22,9 +22,9 @@ jobs:
     - stage: lint
       script:
         - ng lint
-    - stage: build & publish showcase
+    - stage: build & publish demo
       script:
-        - yarn run build:showcase
+        - yarn run build:demo
       deploy:
         provider: pages
         cleanup: true
