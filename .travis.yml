@@ -29,6 +29,7 @@ jobs:
         cleanup: true
         token: $GH_TOKEN
         local_dir: dist/demo
+        verbose: true
       if: branch = master
     - stage: build & publish lib
       script:
