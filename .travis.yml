@@ -25,7 +25,7 @@ jobs:
       script:
         - yarn run build:demo
       deploy:
-        provider: pages
+        provider: pages:git
         cleanup: true
         token: $GH_TOKEN
         local_dir: dist/demo
