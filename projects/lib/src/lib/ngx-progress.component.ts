@@ -3,7 +3,7 @@ import { NgxProgressService } from './ngx-progress.service';
 import { RegisterService } from './register.service';
 
 @Component({
-  selector: 'ngx-progess',
+  selector: 'ngx-progress',
   templateUrl: './ngx-progress.component.html',
   styleUrls: ['ngx-progress.component.scss'],
 })

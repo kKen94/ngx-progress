@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { VendorService } from './vendor-component/vendor.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class NgxProgressService {
   private endEmitter = new Subject();
   private startEmitter = new Subject();

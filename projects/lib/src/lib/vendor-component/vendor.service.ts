@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { BehaviorSubject, timer, of, Observable } from 'rxjs';
 import { map, switchMap, take, tap } from 'rxjs/operators';
-import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 interface IState {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NgxProgressComponent } from './ngx-progress.component';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class RegisterService {
   private existingBars: NgxProgressComponent[] = [];
 
