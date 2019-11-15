@@ -30,7 +30,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
    * The starting value of progress bar (from 1 to 100)
    */
-  @Input() initialValue: number = null;
+  @Input() initialValue: number = undefined;
   /**
    * Show or hide overlay
    */
@@ -39,9 +39,9 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   show = true;
 
   constructor(
-    public progressService: NgxProgressService,
-    private self: ElementRef<NgxProgressComponent>,
-    private register: RegisterService,
+    public readonly progressService: NgxProgressService,
+    private readonly self: ElementRef<NgxProgressComponent>,
+    private readonly register: RegisterService,
   ) {}
 
   ngOnDestroy(): void {

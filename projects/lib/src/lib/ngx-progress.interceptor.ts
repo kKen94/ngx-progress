@@ -6,7 +6,7 @@ import { NgxProgressService } from './ngx-progress.service';
 
 @Injectable()
 export class NgxProgressInterceptor implements HttpInterceptor {
-  constructor(private progressService: NgxProgressService) {}
+  constructor(private readonly progressService: NgxProgressService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.progressService.start();

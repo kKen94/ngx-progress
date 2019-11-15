@@ -28,7 +28,7 @@ export class NgxProgressOnlyHttpModule {}
   exports: [RouterModule, BarModule],
 })
 export class NgxProgressOnlyRouterModule {
-  constructor(router: Router, private progressService: NgxProgressService) {
+  constructor(router: Router, private readonly progressService: NgxProgressService) {
     initRouter(router, progressService);
   }
 }
@@ -41,7 +41,7 @@ export class NgxProgressOnlyRouterModule {
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true }],
 })
 export class NgxProgressModule {
-  constructor(router: Router, private progressService: NgxProgressService) {
+  constructor(router: Router, private readonly progressService: NgxProgressService) {
     initRouter(router, progressService);
   }
 }
