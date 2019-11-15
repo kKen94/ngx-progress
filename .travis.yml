@@ -23,7 +23,7 @@ jobs:
         - ng lint
     - stage: build & publish showcase
       script:
-        - yarn run build:demo
+        - yarn run build:showcase
       deploy:
         provider: pages:git
         cleanup: true
