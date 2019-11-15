@@ -17,7 +17,7 @@ import { SharedModule } from './shared.module';
     { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
   ]
 })
-export class NgxProgressHttpOnlyModule {}
+export class NgxProgressOnlyHttpModule {}
 
 /********************         ROUTER NAVIGATION ONLY         ********************/
 

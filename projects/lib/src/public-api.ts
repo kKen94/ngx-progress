@@ -5,7 +5,7 @@
 export { NgxProgressComponent } from './lib/ngx-progress.component';
 export {
   NgxProgressModule,
-  NgxProgressHttpOnlyModule,
+  NgxProgressOnlyHttpModule,
   NgxProgressOnlyBarModule,
   NgxProgressOnlyRouterModule,
 } from './lib/ngx-progress.module';
