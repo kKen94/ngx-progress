@@ -23,7 +23,7 @@ jobs:
         - ng lint
     - stage: build & publish showcase
       script:
-        - npm run build:demo
+        - yarn run build:demo
       deploy:
         provider: pages
         cleanup: true
@@ -34,6 +34,6 @@ jobs:
       if: branch = master
     - stage: build & publish lib
       script:
-        - npm run build:lib
-        - npm run publish:lib
+        - yarn run build:lib
+        - yarn run publish:lib
       if: branch = master
