@@ -1,5 +1,4 @@
 dist: trusty
-sudo: required
 language: node_js
 node_js:
   - "10"
@@ -27,8 +26,8 @@ jobs:
         - npm run build:demo
       deploy:
         provider: pages
-        skip_cleanup: true
-        github_token: $GH_TOKEN
+        cleanup: true
+        token: $GH_TOKEN
         local_dir: dist/demo
       if: branch = master
     - stage: build & publish lib
