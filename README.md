@@ -45,7 +45,7 @@ or
 Just import a single Module from following:
 
 <div style="margin-left: 5px;">
-• NgxProgressHttpOnlyModule<br />
+• NgxProgressOnlyHttpModule<br />
 • NgxProgressOnlyRouterModule<br />
 • NgxProgressOnlyBarModule<br />
 • NgxProgressModule -> Progressbar will be shown when you perform a http request or when you change angular route or you can manage it by yourself<br /><br />

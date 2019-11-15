@@ -3,12 +3,11 @@ import { NgxProgressService } from './ngx-progress.service';
 import { RegisterService } from './register.service';
 
 @Component({
-  selector: 'ngx-progess',
+  selector: 'ngx-progress',
   templateUrl: './ngx-progress.component.html',
   styleUrls: ['ngx-progress.component.scss'],
 })
 export class NgxProgressComponent implements OnInit, OnDestroy {
-
   /**
    * Color of spinner and progress bar
    * Default color style attributes format ('#0984e3', 'rgb(169, 86, 90)', ...)
@@ -31,7 +30,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
    * The starting value of progress bar (from 1 to 100)
    */
-  @Input() initialValue: number = null;
+  @Input() initialValue: number = undefined;
   /**
    * Show or hide overlay
    */
@@ -40,13 +39,13 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   show = true;
 
   constructor(
-    public progressService: NgxProgressService,
-    private self: ElementRef<NgxProgressComponent>,
-    private register: RegisterService,
+    public readonly progressService: NgxProgressService,
+    private readonly self: ElementRef<NgxProgressComponent>,
+    private readonly register: RegisterService,
   ) {}
 
   ngOnDestroy(): void {
-    this.register.unregisterBar(this.self.nativeElement)
+    this.register.unregisterBar(this.self.nativeElement);
   }
 
   ngOnInit(): void {
