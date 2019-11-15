@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NgxProgressComponent } from './ngx-progress.component';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterModule } from '@angular/router';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import { NgxProgressService } from './ngx-progress.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxProgressInterceptor } from './ngx-progress.interceptor';
@@ -9,23 +16,16 @@ import { SharedModule } from './shared.module';
 /***********************     HTTP ONLY         **************************/
 
 @NgModule({
-  imports: [
-    SharedModule
-  ],
+  imports: [SharedModule],
   exports: [NgxProgressComponent],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
-  ]
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true }],
 })
 export class NgxProgressOnlyHttpModule {}
 
 /********************         ROUTER NAVIGATION ONLY         ********************/
 
 @NgModule({
-  imports: [
-    SharedModule,
-    RouterModule,
-  ],
+  imports: [SharedModule, RouterModule],
   exports: [NgxProgressComponent],
 })
 export class NgxProgressOnlyRouterModule {
@@ -37,14 +37,9 @@ export class NgxProgressOnlyRouterModule {
 /********************         HTTP AND ROUTER NAVIGATION        ********************/
 
 @NgModule({
-  imports: [
-    SharedModule,
-    RouterModule,
-  ],
+  imports: [SharedModule, RouterModule],
   exports: [NgxProgressComponent],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
-  ]
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true }],
 })
 export class NgxProgressModule {
   constructor(router: Router, private progressService: NgxProgressService) {
@@ -55,9 +50,7 @@ export class NgxProgressModule {
 /*******************         ONLY PROGRESSBAR          ********************/
 
 @NgModule({
-  imports: [
-    SharedModule,
-  ],
+  imports: [SharedModule],
   exports: [NgxProgressComponent],
 })
 export class NgxProgressOnlyBarModule {}
@@ -84,7 +77,7 @@ const initRouter = (router: Router, progressService: NgxProgressService) => {
       progressService.start();
     }
 
-    if ((event instanceof NavigationError || event instanceof NavigationEnd || event instanceof NavigationCancel)) {
+    if (event instanceof NavigationError || event instanceof NavigationEnd || event instanceof NavigationCancel) {
       progressService.end();
     }
   });

@@ -4,7 +4,6 @@ import { VendorService } from './vendor-component/vendor.service';
 
 @Injectable()
 export class NgxProgressService {
-
   private endEmitter = new Subject();
   private startEmitter = new Subject();
 
@@ -21,9 +20,7 @@ export class NgxProgressService {
   isStarted: boolean;
   progressCount = 0;
 
-  constructor(
-    private vendorBarService: VendorService,
-  ) { }
+  constructor(private vendorBarService: VendorService) {}
 
   /**
    * Viene fatta partire la progress bar.

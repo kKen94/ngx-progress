@@ -1,7 +1,7 @@
 {
-  "extends": "tslint:recommended",
-  "rulesDirectory": [
-    "codelyzer"
+  "extends": [
+    "angular-tslint-rules",
+    "tslint-config-prettier"
   ],
   "rules": {
     "array-type": false,
@@ -9,6 +9,21 @@
     "deprecation": {
       "severity": "warning"
     },
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
+    "directive-selector": [
+      true,
+      "attribute",
+      "ce",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ce",
+      "kebab-case"
+    ],
     "import-blacklist": [
       true,
       "rxjs/Rx"
@@ -31,6 +46,8 @@
         ]
       }
     ],
+    "newline-before-return": false,
+    "newline-per-chained-call": false,
     "no-consecutive-blank-lines": false,
     "no-console": [
       true,
@@ -45,9 +62,15 @@
       true,
       "ignore-params"
     ],
+    "no-implicit-dependencies": false,
+    "no-import-side-effect": false,
     "no-non-null-assertion": true,
+    "no-parameter-reassignment": false,
     "no-redundant-jsdoc": true,
+    "no-string-literal": false,
     "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": false,
+    "no-use-before-declare": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,
@@ -59,10 +82,7 @@
       true,
       "single"
     ],
-    "trailing-comma": false,
-    "component-class-suffix": true,
-    "contextual-lifecycle": true,
-    "directive-class-suffix": true,
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
@@ -75,5 +95,8 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true
-  }
+  },
+  "rulesDirectory": [
+    "codelyzer"
+  ]
 }

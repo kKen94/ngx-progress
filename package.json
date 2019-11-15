@@ -10,7 +10,20 @@
     "copy:files": "yarn run copy:readme && yarn run copy:license",
     "copy:license": "copy .\\LICENSE.md .\\dist\\lib",
     "copy:readme": "copy .\\README.md .\\dist\\lib",
-    "publish": "cd dist/lib && yarn publish --access public"
+    "publish": "cd dist/lib && yarn publish --access public",
+    "format:check": "prettier --list-different \"projects/**/*.{ts,tsx}\"",
+    "format:write": "prettier --write \"projects/**/*.{ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "projects/lib/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -38,11 +51,16 @@
     "@angular/compiler-cli": "~8.2.13",
     "@angular/language-service": "~8.2.13",
     "@types/node": "~8.9.4",
+    "angular-tslint-rules": "^1.20.1",
     "codelyzer": "^5.0.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
     "ng-packagr": "^5.4.0",
+    "prettier": "^1.19.1",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.5.3"
   }
 }

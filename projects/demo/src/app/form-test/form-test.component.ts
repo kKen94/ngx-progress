@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./form-test.component.scss'],
 })
 export class FormTestComponent {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   async fakeRequest(): Promise<void> {
     await this.http.get('https://github.com/kKen94/ngx-progress').toPromise();

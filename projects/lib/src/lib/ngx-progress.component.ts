@@ -8,7 +8,6 @@ import { RegisterService } from './register.service';
   styleUrls: ['ngx-progress.component.scss'],
 })
 export class NgxProgressComponent implements OnInit, OnDestroy {
-
   /**
    * Color of spinner and progress bar
    * Default color style attributes format ('#0984e3', 'rgb(169, 86, 90)', ...)
@@ -46,7 +45,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnDestroy(): void {
-    this.register.unregisterBar(this.self.nativeElement)
+    this.register.unregisterBar(this.self.nativeElement);
   }
 
   ngOnInit(): void {

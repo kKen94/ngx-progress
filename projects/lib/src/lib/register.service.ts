@@ -3,7 +3,6 @@ import { NgxProgressComponent } from './ngx-progress.component';
 
 @Injectable()
 export class RegisterService {
-
   private existingBars: NgxProgressComponent[] = [];
 
   registerBar(bar: NgxProgressComponent): void {

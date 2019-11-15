@@ -6,19 +6,9 @@ import { NgxProgressService } from './ngx-progress.service';
 import { RegisterService } from './register.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    VendorModule,
-  ],
+  imports: [CommonModule, VendorModule],
   declarations: [NgxProgressComponent],
-  exports: [
-    NgxProgressComponent,
-    CommonModule,
-    VendorModule,
-  ],
-  providers: [
-    NgxProgressService,
-    RegisterService,
-  ]
+  exports: [NgxProgressComponent, CommonModule, VendorModule],
+  providers: [NgxProgressService, RegisterService],
 })
 export class SharedModule {}

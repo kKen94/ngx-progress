@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-  HttpResponse,
-} from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NgxProgressService } from './ngx-progress.service';
@@ -14,13 +8,10 @@ import { NgxProgressService } from './ngx-progress.service';
 export class NgxProgressInterceptor implements HttpInterceptor {
   constructor(private progressService: NgxProgressService) {}
 
-  intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler,
-  ): Observable<HttpEvent<any>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.progressService.start();
     return next.handle(request).pipe(
-      map((event) => {
+      map(event => {
         if (event instanceof HttpResponse) {
           this.progressService.end();
         }

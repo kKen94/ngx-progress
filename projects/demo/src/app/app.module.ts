@@ -12,11 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { fakeHttpProvider } from './fake-http.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormTestComponent,
-    LoganComponent,
-  ],
+  declarations: [AppComponent, FormTestComponent, LoganComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,6 +25,6 @@ import { fakeHttpProvider } from './fake-http.interceptor';
     MatButtonModule,
   ],
   providers: [fakeHttpProvider],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
