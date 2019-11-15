@@ -3,24 +3,23 @@
   "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
+    "lint": "ng lint",
+    "semantic-release": "semantic-release",
     "start:demo": "ng serve demo --open --port=3310",
     "build": "yarn run build:lib && yarn run build:demo",
     "build:lib": "ng build lib && yarn run copy:files",
     "build:demo": "ng build demo --prod",
     "build:showcase": "yarn run build:demo --base-href='https://kKen94.github.io/ngx-progress/'",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
     "copy:files": "yarn run copy:readme && yarn run copy:license && yarn run copy:conduct",
     "copy:license": "copyfiles ./LICENSE.md ./dist/lib",
     "copy:readme": "copyfiles ./README.md ./dist/lib",
     "copy:conduct": "copyfiles ./CODE_OF_CONDUCT.md ./dist/lib",
-    "lint": "ng lint",
-    "package:lib": "yarn run build && yarn run publish",
-    "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
     "adjust-version": "npm-run-all adjust-version:*",
     "adjust-version:lib": "rjp projects/lib/package.json version $VERSION",
     "adjust-version:main": "rjp package.json version $VERSION",
     "format:check": "prettier --list-different \"projects/**/*.{ts,tsx}\"",
-    "format:write": "prettier --write \"projects/**/*.{ts,tsx}\"",
-    "semantic-release": "semantic-release"
+    "format:write": "prettier --write \"projects/**/*.{ts,tsx}\""
   },
   "husky": {
     "hooks": {
