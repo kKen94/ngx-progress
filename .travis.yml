@@ -28,7 +28,6 @@ jobs:
         - yarn run build:demo
       deploy:
         provider: pages
-        skip_cleanup: true
         token: $GH_TOKEN
         local_dir: dist/demo
         verbose: true
