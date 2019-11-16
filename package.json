@@ -1,6 +1,6 @@
 {
   "name": "ngx-progress",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "lint": "ng lint",
@@ -8,7 +8,7 @@
     "start:demo": "ng serve demo --open --port=3310",
     "build": "yarn run build:lib && yarn run build:demo",
     "build:lib": "ng build lib && yarn run copy:files",
-    "build:demo": "ng build demo --prod --base-href='https://kKen94.github.io/ngx-progress/'",
+    "build:demo": "ng build demo --prod --base-href /",
     "publish:lib": "npx semantic-release",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
     "copy:files": "yarn run copy:readme && yarn run copy:license && yarn run copy:conduct",
