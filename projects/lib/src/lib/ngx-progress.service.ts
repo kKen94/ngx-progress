@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { VendorService } from './vendor-component/vendor.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class NgxProgressService {
-
-  private endEmitter = new Subject();
-  private startEmitter = new Subject();
+  private readonly endEmitter = new Subject();
+  private readonly startEmitter = new Subject();
 
   /**
    * Notifica quando lo spinner scompare
@@ -21,9 +20,7 @@ export class NgxProgressService {
   isStarted: boolean;
   progressCount = 0;
 
-  constructor(
-    private vendorBarService: VendorService,
-  ) { }
+  constructor(private readonly vendorBarService: VendorService) {}
 
   /**
    * Viene fatta partire la progress bar.

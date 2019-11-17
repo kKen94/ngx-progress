@@ -9,18 +9,6 @@
     position: relative;
     overflow: auto;
   }
-
-  @media (max-width: 601px) {
-    .auth-height {
-      overflow: hidden;
-    }
-  }
-
-  @media (max-height: 800px) {
-    .auth-height {
-      overflow: hidden;
-    }
-  }
 }
 
 .box {
@@ -41,31 +29,3 @@
   text-decoration: none !important;
 }
 
-@media (max-width: 720px) {
-  .border-box {
-    border: none !important;
-  }
-}
-
-@media (max-width: 601px) {
-  .box {
-    width: 100vw;
-    min-height: 500px;
-  }
-}
-
-@media (max-height: 800px) {
-  .box {
-    min-height: 550px;
-  }
-
-  .border-box {
-    border: none !important;
-  }
-}
-
-@media (max-height: 620px) {
-  .box {
-    min-height: 450px;
-  }
-}

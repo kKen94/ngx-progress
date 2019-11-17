@@ -1,16 +1,42 @@
 {
   "name": "ngx-progress",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "start:demo": "ng serve demo --open --port=3310",
-    "build:demo": "ng build demo --prod",
-    "build:lib": "ng build lib",
+    "ng": "ng",
     "lint": "ng lint",
-    "package:lib": "yarn run build:lib && yarn run copy:files && yarn run publish",
-    "copy:files": "yarn run copy:readme && yarn run copy:license",
-    "copy:license": "copy .\\LICENSE.md .\\dist\\lib",
-    "copy:readme": "copy .\\README.md .\\dist\\lib",
-    "publish": "cd dist/lib && yarn publish --access public"
+    "semantic-release": "semantic-release",
+    "start:demo": "ng serve demo --open --port=3310",
+    "build": "yarn run build:lib && yarn run build:demo",
+    "build:lib": "ng build lib && yarn run copy:files",
+    "build:demo": "ng build demo --prod --base-href /ngx-progress/",
+    "publish:lib": "npx semantic-release",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
+    "copy:files": "yarn run copy:readme && yarn run copy:license && yarn run copy:conduct",
+    "copy:license": "copyfiles ./LICENSE.md ./dist/lib",
+    "copy:readme": "copyfiles ./README.md ./dist/lib",
+    "copy:conduct": "copyfiles ./CODE_OF_CONDUCT.md ./dist/lib",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp projects/lib/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION",
+    "format:check": "prettier --list-different \"projects/**/*.{ts,tsx}\"",
+    "format:write": "prettier --write \"projects/**/*.{ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "projects/lib/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -25,6 +51,7 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "copyfiles": "^2.1.1",
     "hammerjs": "^2.0.8",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.3",
@@ -37,12 +64,31 @@
     "@angular/cli": "~8.3.16",
     "@angular/compiler-cli": "~8.2.13",
     "@angular/language-service": "~8.2.13",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/prompt": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.5",
+    "@semantic-release/exec": "^3.3.8",
+    "@semantic-release/git": "^7.0.18",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.6.0",
+    "angular-tslint-rules": "^1.20.1",
     "codelyzer": "^5.0.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
     "ng-packagr": "^5.4.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "replace-json-property": "^1.4.1",
+    "semantic-release": "^15.13.30",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
-    "tslint": "~5.15.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kKen94/ngx-progress.git"
   }
 }

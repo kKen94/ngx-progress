@@ -1,95 +1,99 @@
-<div style="text-align: center">
-  <h2>@kken94/ngx-progress</h2>
-  <br />
-  A powerfull wrapper of the best progressbar existing -> [@ngx-loading-bar/core](./packages/core/README.md)
-  <br /><br />
-</div>
----
+# @kken94/ngx-progress
+[![Status](https://travis-ci.org/kKen94/ngx-progress.svg?branch=master)](https://travis-ci.org/kKen94/ngx-progress)
+[![npm version](https://img.shields.io/npm/v/@kken94/ngx-progress.svg?style=flat)](https://www.npmjs.com/package/@kken94/ngx-progress "View this project on npm")
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![license](https://img.shields.io/github/license/kKen94/ngx-progress)](http://opensource.org/licenses/MIT)
 
-## Demo
-- demo: 
+NgxProgress is customizable Angular library for showing a progress bar during http request and/or routing change (or all you want) and prevent user interaction.
 
-Table of contents
-=================
-  * [Getting started](#getting-started)
-    * [0. Improvements](#0-improvements)
-    * [1. Install](#1-install)
-    * [2. Import the installed libraries](#2-import-the-installed-libraries)
-    * [3. Include `ngx-progress` where you want](#3-include-ngx-loading-bar-in-your-app-component)
-  * [Emitters](#manage-loading-service)
-  * [Manage loading service](#manage-loading-service)
-  * [Credits](#credits)
-  
-  ## Getting started
-  
-#### 0. Improvements:
+## Changelog
 
-Some improvements:<br /><br />
-• Start and finish emitters<br />
-• Overlay<br />
-• Only one (by choice) module import<br />
-• New requests don't reset bar progress (when others are in progress)<br /><br />
+[Please read the changelog](CHANGELOG.md)
 
-#### 1. Install:
+## Installation
+
+If you use [npm](https://www.npmjs.com/package/npm)
 
 ```bash
-  npm install @kken94/ngx-progress --save
+npm install @kken94/ngx-progress --save
 ```
-or
+
+If you use [yarn](https://yarnpkg.com/)
+
 ```bash
-  yarn add @kken94/ngx-progress
+yarn add @kken94/ngx-progress
 ```
 
-#### 2. Import the installed library:
+## Usage
 
-Just import a single Module from following:
+Choose the most suitable module for you.  
 
-<div style="margin-left: 5px;">
-• NgxProgressHttpOnlyModule<br />
-• NgxProgressOnlyRouterModule<br />
-• NgxProgressOnlyBarModule<br />
-• NgxProgressModule -> Progressbar will be shown when you perform a http request or when you change angular route or you can manage it by yourself<br /><br />
-</div>
+There are four modules:  
+- **NgxProgressModule** (intercept both http requests and router changes)  
+- **NgxProgressOnlyHttpModule** (intercept only http requests)  
+- **NgxProgressOnlyRouterModule** (intercept only router changes)  
+- **NgxProgressOnlyBar** (manage progress bar by yourself)  
 
-example:
-```ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+Import one of this in your **app.module.ts**
 
+```
 import { NgxProgressModule } from '@kken94/ngx-progress';
 
-import { AppComponent } from './app';
-
 @NgModule({
-  ...
+  declarations: [AppComponent],
   imports: [
     ...
-
-    NgxProgressModule
+    NgxProgressModule,
+    ...
   ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
 ```
-#### 3. Include `ngx-progress` where you want:
-
-```ts
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app',
-  template: `
-    ...
-    <ngx-progress></ngx-progress>
-  `,
-})
-export class AppComponent {}
+and place it at the beginning of your **app.component.html**
 ```
-## Customize `ngx-progress`
-Overlay...<br />
-For customization and ignoring request see:<br />
-https://github.com/aitboudad/ngx-loading-bar#3-include-ngx-loading-bar-in-your-app-component
+<ngx-progress></ngx-progress>
+<div>
+...
+</div>
+```
 
-# Credits 
+**Note:** NgxProgress supports multiple requests. If during the bar progress another request is fired, bar will not reset and keep going until all requests are completed.
 
-- [@ngx-loading-bar/core](./packages/core/README.md)
-- https://github.com/aitboudad/ngx-loading-bar
+## Configuration
+
+### Customization
+
+| Input                  | Description        | Default value   |
+| ---------------------- | ------------------ | --------------- |
+| ```barColor```         |                    | ```#0984e3```   |
+| ```showSpinner```      |                    | ```false```     |
+| ```showBar```          |                    | ```true```      |
+| ```height```           | Height of bar      | ```1px```       |
+| ```spinnerDiameter```  |                    | ```10px```      |
+| ```initialValue```     | From 1 to 100      | ```undefined``` |
+| ```overlay```          | Show overlay that prevent user click | ```true```      |
+| ```spinnerSpeed```     | From 1 to 10       | ```4```         |
+
+
+### Emitters  
+
+NgxProgress provides also some emitters.  
+You have to inject ```NgxProgressService``` and subscribe ```$end``` or ```start```
+
+### Manually show and hide progress
+
+In ```NgxProgressService``` there are four methods:  
+- ```start()```: start bar if no request is in progress or add new request to queue of the bar already shown
+- ```end()```: complete the bar if all requests are finished
+- ```reset()```: force bar to start from zero
+- ```terminate()```: force bar to terminate even if some requests are in progress
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Credits
+
+Inspired by [Aitboudad](https://github.com/aitboudad), the awesome creator of [ngx-loading-bar](https://github.com/aitboudad/ngx-loading-bar)
