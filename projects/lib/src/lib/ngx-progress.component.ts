@@ -14,19 +14,23 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    */
   @Input() barColor = '#0984e3';
   /**
-   * Show and hide the circle spinner
+   * Show and hide circle spinner
    */
-  @Input() spinner = false;
+  @Input() showSpinner = false;
   /**
-   * Heigth of progress bar
-   * Default heigth style attributes format ('1px', '1%', ...)
+   * Show and hide progress bar
    */
-  @Input() heigth = '1px';
+  @Input() showBar = true;
+  /**
+   * Height of progress bar
+   * Default height style attributes format ('1px', '1%', ...)
+   */
+  @Input() height = '1px';
   /**
    * Width of spinner
    * Default width style attributes format ('5px', '5%', ...)
    */
-  @Input() spinnerDiameter = '5px';
+  @Input() spinnerDiameter = '10px';
   /**
    * The starting value of progress bar (from 1 to 100)
    */
@@ -35,6 +39,10 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    * Show or hide overlay
    */
   @Input() overlay = true;
+  /**
+   * Set spinner speed, from 1 to 10
+   */
+  @Input() spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
 
   show = true;
 
