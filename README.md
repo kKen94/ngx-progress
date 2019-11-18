@@ -71,7 +71,7 @@ and place it at the beginning of your **app.component.html**
 | ```barColor```         |                    | ```#0984e3```   |
 | ```showSpinner```      |                    | ```false```     |
 | ```showBar```          |                    | ```true```      |
-| ```height```           | Height of bar      | ```1px```       |
+| ```barHeight```        |                    | ```1px```       |
 | ```spinnerDiameter```  |                    | ```10px```      |
 | ```initialValue```     | From 1 to 100      | ```undefined``` |
 | ```overlay```          | Show overlay that prevent user click | ```true```      |
