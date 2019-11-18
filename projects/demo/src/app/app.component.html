@@ -1,17 +1,15 @@
-<ngx-progress [showSpinner]="true"></ngx-progress>
-
-<div>
-  <div style="text-align: center; margin-bottom: 5%; padding-top: 10px;">Overlay test</div>
-  <div class="auth-height" fxLayout="column" fxLayoutAlign="center center">
-
-    <div class="border-box">
-      <ngx-progress [barHeight]="'2px'"></ngx-progress>
-      <router-outlet></router-outlet>
-    </div>
-
-    <div style="font-size: 10px; bottom: 10px; right: 10px; position: absolute;">
-      <div>Icon made by <a href="https://www.freepik.com/home"> Freepik </a> from www.flaticon.com</div>
-      <div><a target="_blank" href="https://icons8.com/icons/set/wolverine">Wolverine icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a></div>
-    </div>
+<div fxLayout="row">
+  <div fxFlex="70">
+    <ngx-progress
+      [showSpinner]="showSpinner"
+      [barColor]="barColor"
+      [barHeight]="barHeight"
+      [initialValue]="initialValue"
+      [overlay]="overlay"
+      [showBar]="showBar"
+      [spinnerDiameter]="spinnerDiameter"
+      [spinnerSpeed]="spinnerSpeed"></ngx-progress>
+    <div class="colorful"></div>
   </div>
+  <div fxLayout="column" fxFlex="30">bar</div>
 </div>

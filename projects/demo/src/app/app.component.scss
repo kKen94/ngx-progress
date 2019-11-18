@@ -1,31 +1,15 @@
 :host {
-  .auth-height {
-    height: 100%;
+  .colorful {
+    background:
+      -webkit-linear-gradient(315deg, hsla(351.55, 91.82%, 42.86%, 1) 0%, hsla(351.55, 91.82%, 42.86%, 0) 70%),
+      -webkit-linear-gradient(65deg, hsla(41.87, 97.1%, 41.33%, 1) 10%, hsla(41.87, 97.1%, 41.33%, 0) 80%),
+      -webkit-linear-gradient(135deg, hsla(327.49, 90.68%, 44.73%, 1) 15%, hsla(327.49, 90.68%, 44.73%, 0) 80%),
+      -webkit-linear-gradient(205deg, hsla(24.33, 95.84%, 43.7%, 1) 100%, hsla(24.33, 95.84%, 43.7%, 0) 70%);
+    background:
+      linear-gradient(135deg, hsla(351.55, 91.82%, 42.86%, 1) 0%, hsla(351.55, 91.82%, 42.86%, 0) 70%),
+      linear-gradient(25deg, hsla(41.87, 97.1%, 41.33%, 1) 10%, hsla(41.87, 97.1%, 41.33%, 0) 80%),
+      linear-gradient(315deg, hsla(327.49, 90.68%, 44.73%, 1) 15%, hsla(327.49, 90.68%, 44.73%, 0) 80%),
+      linear-gradient(245deg, hsla(24.33, 95.84%, 43.7%, 1) 100%, hsla(24.33, 95.84%, 43.7%, 0) 70%);
   }
-
-  .border-box {
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    position: relative;
-    overflow: auto;
-  }
-}
-
-.box {
-  width: 450px;
-  min-height: 650px;
-}
-
-.logo {
-  width: 60px;
-}
-
-.padding-box {
-  padding: 48px 40px 36px;
-}
-
-.link {
-  color: #0984e3;
-  text-decoration: none !important;
 }
 
