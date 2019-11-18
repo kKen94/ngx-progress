@@ -25,7 +25,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    * Height of progress bar
    * Default height style attributes format ('1px', '1%', ...)
    */
-  @Input() height = '1px';
+  @Input() barHeight = '1px';
   /**
    * Width of spinner
    * Default width style attributes format ('5px', '5%', ...)

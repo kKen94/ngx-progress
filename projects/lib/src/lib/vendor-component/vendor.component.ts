@@ -10,7 +10,7 @@ export class VendorComponent {
   @Input() includeSpinner: boolean;
   @Input() includeBar: boolean;
   @Input() color: string;
-  @Input() height: string;
+  @Input() barHeight: string;
   @Input() diameter: string;
   @Input() value: number;
   @Input() spinnerSpeed: number;

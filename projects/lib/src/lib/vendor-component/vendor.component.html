@@ -3,8 +3,8 @@
     <div [style.width]="diameter" [style.height]="diameter" class="spinner-icon" [style.animation-duration]="1000/spinnerSpeed+'ms'"></div>
   </div>
   <div id="loading-bar" *ngIf="includeBar" [style.color]="color">
-    <div class="bar" [style.background]="color" [style.height]="height" [style.width]="progress + '%'">
-      <div class="peg" [style.height]="height"></div>
+    <div class="bar" [style.background]="color" [style.height]="barHeight" [style.width]="progress + '%'">
+      <div class="peg" [style.height]="barHeight"></div>
     </div>
   </div>
 </ng-container>
