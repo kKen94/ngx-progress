@@ -12,7 +12,7 @@ export class VendorComponent {
   @Input() color: string;
   @Input() barHeight: string;
   @Input() diameter: string;
-  @Input() value: number;
+  @Input() value: number = undefined;
   @Input() spinnerSpeed: number;
 
   constructor(public loader: VendorService) {}

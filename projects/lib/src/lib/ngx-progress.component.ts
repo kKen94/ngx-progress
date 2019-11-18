@@ -12,7 +12,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    * Color of spinner and progress bar
    * Default color style attributes format ('#0984e3', 'rgb(169, 86, 90)', ...)
    */
-  @Input() barColor = '#0984e3';
+  @Input() color = '#0984e3';
   /**
    * Show and hide circle spinner
    */
@@ -34,7 +34,16 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
    * The starting value of progress bar (from 1 to 100)
    */
-  @Input() initialValue: number = undefined;
+  _initialValue: number = undefined;
+  get initialValue(): number {
+    return this._initialValue;
+  }
+  @Input() set initialValue(initialValue: number) {
+    this._initialValue = initialValue;
+    if (initialValue !== undefined) {
+      this.progressService.set(initialValue);
+    }
+  }
   /**
    * Show or hide overlay
    */
