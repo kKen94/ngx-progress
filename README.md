@@ -68,7 +68,7 @@ and place it at the beginning of your **app.component.html**
 
 | Input                  | Description        | Default value   |
 | ---------------------- | ------------------ | --------------- |
-| ```barColor```         |                    | ```#0984e3```   |
+| ```color```         |                    | ```#0984e3```   |
 | ```showSpinner```      |                    | ```false```     |
 | ```showBar```          |                    | ```true```      |
 | ```barHeight```        |                    | ```1px```       |

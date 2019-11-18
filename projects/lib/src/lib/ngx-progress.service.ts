@@ -69,4 +69,12 @@ export class NgxProgressService {
     this.isStarted = false;
     this.endEmitter.next();
   }
+
+  /**
+   * Setta la progressbar al valore indicato
+   * @param value: valore a cui settare la progressbar
+   */
+  set(value: number): void {
+    this.vendorBarService.set(value);
+  }
 }
