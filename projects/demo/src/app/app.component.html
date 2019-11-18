@@ -1,15 +1,71 @@
-<div fxLayout="row">
-  <div fxFlex="70">
+<div class="full-height" fxLayout="row">
+  <aside class="full-height full-width sidebar" fxLayout="column" fxFlex="30">
+    <nav class="nav">
+      <ul>
+        <li>
+          <span>show overlay</span>
+          <mat-checkbox [(ngModel)]="overlay"></mat-checkbox>
+        </li>
+        <li>
+          <span>show spinner</span>
+          <mat-checkbox [(ngModel)]="showSpinner"></mat-checkbox>
+        </li>
+        <li>
+          <span>show bar</span>
+          <mat-checkbox [(ngModel)]="showBar"></mat-checkbox>
+        </li>
+        <li>
+          <span class="bottom">color</span>
+          <div class="square" [style.background-color]="color" (click)="showPicker = !showPicker;"></div>
+          <color-block class="picker" *ngIf="showPicker" [triangle]="'hide'" [color]="color" (onChangeComplete)="changeColor($event)"></color-block>
+        </li>
+        <li>
+          <span>bar Height</span>
+          <mat-form-field>
+            <input matInput class="input" [(ngModel)]="barHeight">
+          </mat-form-field>
+        </li>
+        <li>
+          <span>spinner diameter</span>
+          <mat-form-field>
+            <input matInput class="input" [(ngModel)]="spinnerDiameter">
+          </mat-form-field>
+        </li>
+        <li>
+          <span>initial value</span>
+          <mat-slider
+            class="slider"
+            [max]="100"
+            [min]="1"
+            [thumbLabel]="true"
+            [tickInterval]="0"
+            [(ngModel)]="initialValue">
+          </mat-slider>
+        </li>
+        <li>
+          <span>spinner speed</span>
+          <mat-slider
+            class="slider"
+            [max]="10"
+            [min]="1"
+            [thumbLabel]="true"
+            [tickInterval]="0"
+            [(ngModel)]="spinnerSpeed">
+          </mat-slider>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="full-height" fxFlex="70">
     <ngx-progress
       [showSpinner]="showSpinner"
-      [barColor]="barColor"
+      [color]="color"
       [barHeight]="barHeight"
       [initialValue]="initialValue"
       [overlay]="overlay"
       [showBar]="showBar"
       [spinnerDiameter]="spinnerDiameter"
       [spinnerSpeed]="spinnerSpeed"></ngx-progress>
-    <div class="colorful"></div>
+    <div class="full-height"></div>
   </div>
-  <div fxLayout="column" fxFlex="30">bar</div>
 </div>
