@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kKen94/ngx-progress/compare/v1.1.0...v1.1.1) (2019-11-18)
+
+
+### Bug Fixes
+
+* **initial value:** manage initial value with set() method ([59371f9](https://github.com/kKen94/ngx-progress/commit/59371f92d7d91302808667213994b517d240c8b1))
+
 # [1.1.0](https://github.com/kKen94/ngx-progress/compare/v1.0.0...v1.1.0) (2019-11-17)
 
 
