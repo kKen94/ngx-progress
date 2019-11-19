@@ -81,7 +81,7 @@ and place it at the beginning of your **app.component.html**
 ### Emitters  
 
 NgxProgress provides also some emitters.  
-You have to inject ```NgxProgressService``` and subscribe ```$end``` or ```start```
+You have to inject ```NgxProgressService``` and subscribe ```end$``` or ```start$```
 
 ### Manually show and hide progress
 
