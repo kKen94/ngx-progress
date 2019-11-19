@@ -5,12 +5,27 @@
     display: none !important;
   }
 
+  ::ng-deep .mat-fab {
+    background-color: white;
+  }
+
+  ::ng-deep .mat-icon.mat-primary {
+    color: #646464;
+  }
+
   .full-height {
     height: 100%;
   }
 
   .full-width {
     width: 100%;
+  }
+
+  .tab-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
   }
 
   .colorful {
@@ -27,7 +42,6 @@
   }
 
   .sidebar {
-    //position: fixed;
     background: #312450;
     font-size: 0.65em;
   }
@@ -43,10 +57,6 @@
 
   .nav ul {
     list-style: none;
-
-    div {
-
-    }
 
     li {
       position: relative;
@@ -112,6 +122,35 @@
   .slider {
     text-transform: none;
     letter-spacing: normal;
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .nav ul li {
+      margin: 1.5em 0;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    .nav ul li {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 959px) {
+    aside {
+      display: none !important;
+
+      &.sidebar.active {
+        display: inherit !important;
+        flex: 1 1 150% !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .tab-button {
+      display: none;
+    }
   }
 }
 

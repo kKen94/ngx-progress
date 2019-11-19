@@ -39,4 +39,12 @@ export class AppComponent {
       this.showPicker = false;
     }
   }
+
+  toggleMenu(): void {
+    const classs = (document.getElementsByTagName('ASIDE').item(0) as HTMLElement).className;
+    (document.getElementsByTagName('ASIDE').item(0) as HTMLElement).className
+      = classs.includes('active')
+        ? classs.replace(' active', '')
+        : classs.replace('sidebar', 'sidebar active');
+  }
 }
