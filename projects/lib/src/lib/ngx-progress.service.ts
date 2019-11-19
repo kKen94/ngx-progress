@@ -41,7 +41,9 @@ export class NgxProgressService {
    * Se ci sono però altre chiamate / navigazioni di mezzo non sparisce finché non vengono risolte anche quelle
    */
   end(): void {
-    this.progressCount--;
+    if (this.progressCount > 0) {
+      this.progressCount--;
+    }
     setTimeout(() => {
       if (this.progressCount === 0) {
         this.vendorBarService.complete();
