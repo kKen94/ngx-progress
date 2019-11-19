@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/kKen94/ngx-progress/compare/v1.1.1...v1.1.2) (2019-11-19)
+
+
+### Bug Fixes
+
+* **end of bar:** fix an error that not completed progress bar ([0d3257a](https://github.com/kKen94/ngx-progress/commit/0d3257a81de7ab24dd8fc70eecd4561bf6c67fac))
+
 ## [1.1.1](https://github.com/kKen94/ngx-progress/compare/v1.1.0...v1.1.1) (2019-11-18)
 
 
