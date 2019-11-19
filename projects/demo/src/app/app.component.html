@@ -1,5 +1,5 @@
 <div class="full-height" fxLayout="row">
-  <aside class="full-height full-width sidebar" fxLayout="column" fxFlex="30" fxFlex.lg="40" fxFlex.md="50">
+  <aside class="sidebar full-height full-width animated slideInLeft" style="animation-duration: 100ms;" fxLayout="column" fxFlex="30" fxFlex.lg="40" fxFlex.md="50" fxFlex.sm="150" fxFlex.xs="150">
     <nav class="nav">
       <ul>
         <li>
@@ -56,7 +56,10 @@
       </ul>
     </nav>
   </aside>
-  <div class="full-height" fxFlex="70" fxFlex.lg="60" fxFlex.md="50">
+  <button mat-fab class="tab-button" aria-label="Settings" (click)="toggleMenu()">
+    <mat-icon color="primary">build</mat-icon>
+  </button>
+  <div class="full-height" fxFlex="70" fxFlex.lg="60" fxFlex.md="50" fxFlex.sm="100" fxFlex.xs="100">
     <ngx-progress
       [showSpinner]="showSpinner"
       [color]="color"

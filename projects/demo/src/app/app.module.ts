@@ -8,6 +8,7 @@ import { NgxProgressOnlyBarModule } from '../../../lib/src/lib/ngx-progress.modu
 import { FormsModule } from '@angular/forms';
 import { ColorBlockModule } from 'ngx-color/block';
 import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import {MatButtonModule} from "@angular/material/button";
     ColorBlockModule,
     MatSliderModule,
     MatButtonModule,
+    MatIconModule,
   ],
   bootstrap: [AppComponent],
 })
