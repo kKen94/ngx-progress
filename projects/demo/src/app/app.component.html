@@ -1,5 +1,5 @@
 <div class="full-height" fxLayout="row">
-  <aside class="full-height full-width sidebar" fxLayout="column" fxFlex="30">
+  <aside class="full-height full-width sidebar" fxLayout="column" fxFlex="30" fxFlex.lg="40" fxFlex.md="50">
     <nav class="nav">
       <ul>
         <li>
@@ -56,7 +56,7 @@
       </ul>
     </nav>
   </aside>
-  <div class="full-height" fxFlex="70">
+  <div class="full-height" fxFlex="70" fxFlex.lg="60" fxFlex.md="50">
     <ngx-progress
       [showSpinner]="showSpinner"
       [color]="color"
@@ -66,6 +66,8 @@
       [showBar]="showBar"
       [spinnerDiameter]="spinnerDiameter"
       [spinnerSpeed]="spinnerSpeed"></ngx-progress>
-    <div class="full-height"></div>
+    <div class="full-height" fxLayout="column" fxLayoutAlign="center center">
+      <button mat-flat-button color="accent"><span style="color: #cbcbcb;">Click me</span></button>
+    </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxProgressOnlyBarModule } from '../../../lib/src/lib/ngx-progress.module';
 import { FormsModule } from '@angular/forms';
 import { ColorBlockModule } from 'ngx-color/block';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { ColorBlockModule } from 'ngx-color/block';
     FormsModule,
     ColorBlockModule,
     MatSliderModule,
+    MatButtonModule,
   ],
   bootstrap: [AppComponent],
 })
