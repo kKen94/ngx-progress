@@ -7,8 +7,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxProgressOnlyBarModule } from '../../../lib/src/lib/ngx-progress.module';
 import { FormsModule } from '@angular/forms';
 import { ColorBlockModule } from 'ngx-color/block';
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent],
