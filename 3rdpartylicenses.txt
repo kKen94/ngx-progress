@@ -110,9 +110,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/material/button
+
 @angular/material/checkbox
 
 @angular/material/form-field
+
+@angular/material/icon
 
 @angular/material/slider
 
