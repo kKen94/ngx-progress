@@ -53,8 +53,6 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    */
   @Input() spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
 
-  show = true;
-
   constructor(
     public readonly progressService: NgxProgressService,
     private readonly self: ElementRef<NgxProgressComponent>,
@@ -62,10 +60,10 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnDestroy(): void {
-    this.register.unregisterBar(this.self.nativeElement);
+    this.register.unregisterBar(this.self);
   }
 
   ngOnInit(): void {
-    this.register.registerBar(this.self.nativeElement);
+    this.register.registerBar(this.self);
   }
 }
