@@ -8,12 +8,12 @@ export class NgxProgressService {
   private readonly startEmitter = new Subject();
 
   /**
-   * Notifica quando lo spinner scompare
+   * Tells when progress ends
    */
   end$ = this.endEmitter.asObservable();
 
   /**
-   * Notifica quando lo spinner parte
+   * Tells when progress starts
    */
   start$ = this.startEmitter.asObservable();
 
@@ -23,9 +23,9 @@ export class NgxProgressService {
   constructor(private readonly vendorBarService: VendorService) {}
 
   /**
-   * Viene fatta partire la progress bar.
-   * Se ci sono altre navigazioni / chiamate che avevano precedentemente fatto partire la progressbar
-   * questa non riparte da 0 ma continua fluidamente ad andare avanti
+   * Starts progress bar.
+   * If other request / router changes had previously started the progressbar
+   * it doesn't restart but continues to move smoothly
    */
   start(): void {
     if (this.progressCount === 0) {
@@ -37,8 +37,8 @@ export class NgxProgressService {
   }
 
   /**
-   * Viene interrota la progressbar.
-   * Se ci sono però altre chiamate / navigazioni di mezzo non sparisce finché non vengono risolte anche quelle
+   * Ends progress bar.
+   * If there are other requests in progress this will not disappear until those are also resolved
    */
   end(): void {
     if (this.progressCount > 0) {
@@ -54,7 +54,7 @@ export class NgxProgressService {
   }
 
   /**
-   * Forza la progressbar a partire da 0 anche se altre chiamate / navigazioni sono in corso
+   * Force reset of the progress bar
    */
   reset(): void {
     this.vendorBarService.start();
@@ -64,7 +64,7 @@ export class NgxProgressService {
   }
 
   /**
-   * Forza la progressbar a scomparire anche se altre chiamate / navigazioni sono in corso
+   * Force the end of the progress
    */
   terminate(): void {
     this.vendorBarService.complete();
@@ -73,8 +73,8 @@ export class NgxProgressService {
   }
 
   /**
-   * Setta la progressbar al valore indicato
-   * @param value: valore a cui settare la progressbar
+   * Set the progress bar at specified value
+   * @param value: The value at which to set the progress bar
    */
   set(value: number): void {
     this.vendorBarService.set(value);
