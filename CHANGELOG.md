@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/kKen94/ngx-progress/compare/v1.1.2...v1.2.0) (2019-11-21)
+
+
+### Bug Fixes
+
+* **style:** remove overflow-x ([00c9169](https://github.com/kKen94/ngx-progress/commit/00c9169f229b0801747f14e5cb37b72f786ea774))
+
+
+### Features
+
+* **multiple instance:** ngx-progress can be instantiated multiple times ([ce5975c](https://github.com/kKen94/ngx-progress/commit/ce5975cc6df97817d18f02633a3bbd092e5c9a36))
+
 ## [1.1.2](https://github.com/kKen94/ngx-progress/compare/v1.1.1...v1.1.2) (2019-11-19)
 
 

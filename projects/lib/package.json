@@ -1,7 +1,7 @@
 {
   "name": "@kken94/ngx-progress",
   "description": "Powerful progress bar for Angular",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "license": "MIT",
   "homepage": "https://github.com/kKen94/ngx-progress",
   "repository": {
