@@ -85,7 +85,7 @@
         width: 100%;
         height: 0.1em;
         left: 0;
-        bottom: 0;
+        bottom: -1rem;
         background: black linear-gradient(to right, #5e42a6, #b74e91);
       }
     }
@@ -99,19 +99,20 @@
     outline: none;
     border-radius: 4px;
     display: inline-block;
+    vertical-align: middle;
   }
 
   .picker {
     position: fixed;
     width: 200px;
-    right: -2rem;
+    right: -5rem;
     z-index: 3;
-    top: 21rem;
+    top: 3rem;
   }
 
   .bottom {
     position: relative;
-    bottom: 0.3rem;
+    //bottom: 0.3rem;
   }
 
   .input {
@@ -127,12 +128,18 @@
   @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .nav ul li {
       margin: 1.5em 0;
+      &::after {
+        bottom: 0;
+      }
     }
   }
 
   @media screen and (max-width: 1279px) {
     .nav ul li {
       margin: 0;
+      &::after {
+        bottom: 0;
+      }
     }
   }
 
@@ -145,11 +152,49 @@
         flex: 1 1 150% !important;
       }
     }
+    .nav ul li {
+      &::after {
+        bottom: 0;
+      }
+    }
   }
 
   @media screen and (min-width: 960px) {
     .tab-button {
       display: none;
+    }
+    .nav ul li {
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .nav ul {
+      padding: 0;
+      li {
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  @media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .nav ul {
+      padding: 0;
+      li {
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+      }
     }
   }
 }
