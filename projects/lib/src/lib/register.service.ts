@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { NgxProgressComponent } from './ngx-progress.component';
 
 @Injectable({ providedIn: 'root' })
 export class RegisterService {
-  private readonly existingBars: NgxProgressComponent[] = [];
+  private readonly existingBars: ElementRef<NgxProgressComponent>[] = [];
 
-  registerBar(bar: NgxProgressComponent): void {
-    this.existingBars.push(bar);
+  registerBar(newBar: ElementRef<NgxProgressComponent>): void {
+    this.existingBars.forEach(bar => {
+      bar.nativeElement['style']['display'] = 'none';
+    });
+    this.existingBars.push(newBar);
   }
 
-  unregisterBar(bar: NgxProgressComponent): void {
+  unregisterBar(bar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.splice(this.existingBars.indexOf(bar), 1);
+    this.existingBars[this.existingBars.length - 1]['style']['display'] = 'inherit';
   }
-
-  // TODO: ogni volta che un componente viene registrato o deregistrato solo l'ultimo deve avere la variabile show impostata a true
 }

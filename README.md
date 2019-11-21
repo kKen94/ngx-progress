@@ -52,15 +52,21 @@ import { NgxProgressModule } from '@kken94/ngx-progress';
 })
 export class AppModule {}
 ```
-and place it at the beginning of your **app.component.html** or where you want
+and place it into the element you want to cover.  
+
+**Note:** If you want to use overlay be sure that the parent element has position:relative
+Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 ```
-<ngx-progress></ngx-progress>
-<div>
+<div style="position: relative">
+<ngx-progress [overlay]="true"></ngx-progress>
 ...
 </div>
 ```
 
-**Note:** NgxProgress supports multiple requests. If during the bar progress another request is fired, bar will not reset and keep going until all requests are completed.
+## Feature
+
+- NgxProgress supports multiple requests. If during the bar progress another request is fired, bar will not reset and keep going until all requests are completed.  
+- NgxProgress can be instantiated multiple times. Only the deepest one will be displayed
 
 ## Configuration
 
