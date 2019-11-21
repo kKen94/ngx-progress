@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { VendorService } from './vendor.service';
+import { BarService } from './bar.service';
 
 @Component({
   selector: 'ngx-vendor-bar',
-  templateUrl: './vendor.component.html',
-  styleUrls: ['./vendor.component.scss'],
+  templateUrl: './bar.component.html',
+  styleUrls: ['./bar.component.scss'],
 })
-export class VendorComponent {
+export class BarComponent {
   @Input() includeSpinner: boolean;
   @Input() includeBar: boolean;
   @Input() color: string;
@@ -15,5 +15,5 @@ export class VendorComponent {
   @Input() value: number = undefined;
   @Input() spinnerSpeed: number;
 
-  constructor(public loader: VendorService) {}
+  constructor(public loader: BarService) {}
 }

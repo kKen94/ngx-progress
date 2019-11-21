@@ -9,7 +9,7 @@ interface IState {
 }
 
 @Injectable({ providedIn: 'root' })
-export class VendorService {
+export class BarService {
   private readonly state$ = new BehaviorSubject<IState>({
     requests: 0,
     value: undefined,
