@@ -36,7 +36,7 @@ There are four modules:
 - **NgxProgressOnlyRouterModule** (intercept only router changes)  
 - **NgxProgressOnlyBar** (manage progress bar by yourself)  
 
-Import one of this in your **app.module.ts**
+Import one of this in your **module.ts**
 
 ```
 import { NgxProgressModule } from '@kken94/ngx-progress';
@@ -52,7 +52,7 @@ import { NgxProgressModule } from '@kken94/ngx-progress';
 })
 export class AppModule {}
 ```
-and place it at the beginning of your **app.component.html**
+and place it at the beginning of your **app.component.html** or where you want
 ```
 <ngx-progress></ngx-progress>
 <div>
