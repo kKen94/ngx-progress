@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/kKen94/ngx-progress/compare/v1.2.0...v1.2.1) (2019-11-22)
+
+
+### Bug Fixes
+
+* **demo:** set position relative to ngx-progress parent ([50d3928](https://github.com/kKen94/ngx-progress/commit/50d39286ecf37ff46bee7aae809ac68b44fcdbe1))
+
 # [1.2.0](https://github.com/kKen94/ngx-progress/compare/v1.1.2...v1.2.0) (2019-11-21)
 
 
