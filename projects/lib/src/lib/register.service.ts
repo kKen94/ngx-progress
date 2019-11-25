@@ -14,6 +14,8 @@ export class RegisterService {
 
   unregisterBar(bar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.splice(this.existingBars.indexOf(bar), 1);
-    this.existingBars[this.existingBars.length - 1]['style']['display'] = 'inherit';
+    if (this.existingBars.length) {
+      this.existingBars[this.existingBars.length - 1]['style']['display'] = 'inherit';
+    }
   }
 }
