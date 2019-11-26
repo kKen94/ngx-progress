@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { NgxProgressService } from '../../../lib/src/lib/ngx-progress.service';
 import { ColorEvent } from 'ngx-color';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent {
   overlay = true;
   spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
   showPicker = false;
+  env = environment;
 
   @HostListener('click', ['$event']) onClick(event: MouseEvent): void {
     if (
