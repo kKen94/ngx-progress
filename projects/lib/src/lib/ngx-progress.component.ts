@@ -9,7 +9,8 @@ import { RegisterService } from './register.service';
 })
 export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
-   * Color of spinner and progress bar
+   * Color of spinner and progress bar.
+   *
    * Default color style attributes format ('#0984e3', 'rgb(169, 86, 90)', ...)
    */
   @Input() color = '#0984e3';
@@ -22,12 +23,14 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    */
   @Input() showBar = true;
   /**
-   * Height of progress bar
+   * Height of progress bar.
+   *
    * Default height style attributes format ('1px', '1%', ...)
    */
   @Input() barHeight = '1px';
   /**
-   * Width of spinner
+   * Width of spinner.
+   *
    * Default width style attributes format ('5px', '5%', ...)
    */
   @Input() spinnerDiameter = '10px';

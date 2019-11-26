@@ -58,8 +58,8 @@ and place it into the element you want to cover.
 Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 ```
 <div style="position: relative">
-<ngx-progress [overlay]="true"></ngx-progress>
-...
+  <ngx-progress [overlay]="true"></ngx-progress>
+  <table></table>
 </div>
 ```
 

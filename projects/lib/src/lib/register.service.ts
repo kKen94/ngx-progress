@@ -5,6 +5,10 @@ import { NgxProgressComponent } from './ngx-progress.component';
 export class RegisterService {
   private readonly existingBars: ElementRef<NgxProgressComponent>[] = [];
 
+  /**
+   * Registers a new bar to the existing bars array
+   * @param newBar: the component to register
+   */
   registerBar(newBar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.forEach(bar => {
       bar.nativeElement['style']['display'] = 'none';
@@ -12,10 +16,14 @@ export class RegisterService {
     this.existingBars.push(newBar);
   }
 
+  /**
+   * Called when a component that contains an ngx-progress is destroyed
+   * @param bar: the bar to unregister
+   */
   unregisterBar(bar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.splice(this.existingBars.indexOf(bar), 1);
     if (this.existingBars.length) {
-      this.existingBars[this.existingBars.length - 1]['style']['display'] = 'inherit';
+      this.existingBars[this.existingBars.length - 1].nativeElement['style']['display'] = 'inherit';
     }
   }
 }
