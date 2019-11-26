@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/kKen94/ngx-progress/compare/v1.2.1...v1.2.2) (2019-11-26)
+
+
+### Bug Fixes
+
+* **bugs:** fixed some bugs ([2405c6e](https://github.com/kKen94/ngx-progress/commit/2405c6e071186442972560537a23244a5faade8a))
+
 ## [1.2.1](https://github.com/kKen94/ngx-progress/compare/v1.2.0...v1.2.1) (2019-11-22)
 
 
