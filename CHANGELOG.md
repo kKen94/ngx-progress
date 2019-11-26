@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/kKen94/ngx-progress/compare/v1.2.2...v1.2.3) (2019-11-26)
+
+
+### Bug Fixes
+
+* **register service:** fixed a bug that didn't allow bar unregistration ([5587891](https://github.com/kKen94/ngx-progress/commit/55878916cae5d5927caa998ea91b76266c972a1c))
+
 ## [1.2.2](https://github.com/kKen94/ngx-progress/compare/v1.2.1...v1.2.2) (2019-11-26)
 
 
