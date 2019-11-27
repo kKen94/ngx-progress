@@ -7,6 +7,9 @@ export class NgxProgressService {
   private readonly endEmitter = new Subject();
   private readonly startEmitter = new Subject();
 
+  /**
+   * Tells if bar is enabled or not
+   */
   private _isEnable = true;
   get isEnable(): boolean {
     return this._isEnable;
@@ -96,7 +99,7 @@ export class NgxProgressService {
   }
 
   /**
-   * Disable bars
+   * Disables all the bars that will not be shown until the next enabling
    */
   disable(): void {
     this.isEnable = false;
