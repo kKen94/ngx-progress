@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/kKen94/ngx-progress/compare/v1.2.3...v1.3.0) (2019-11-27)
+
+
+### Bug Fixes
+
+* **interceptor:** on http error interceptor terminate progress bar ([0792532](https://github.com/kKen94/ngx-progress/commit/079253214a7bdc57e36e5e711eddb091aa8d0175))
+
+
+### Features
+
+* **bar enabling:** method to enable or disable bar. Boolean control var ([49994e6](https://github.com/kKen94/ngx-progress/commit/49994e6837a023c2b3af447a42fe937bd2f239b7))
+
 ## [1.2.3](https://github.com/kKen94/ngx-progress/compare/v1.2.2...v1.2.3) (2019-11-26)
 
 
