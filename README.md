@@ -97,6 +97,15 @@ In ```NgxProgressService``` there are four methods:
 - ```reset()```: force bar to start from zero
 - ```terminate()```: force bar to terminate even if some requests are in progress
 
+### Enable and disable progress bar
+
+In ```NgxProgressService```:  
+- ```enable()```: enable bars if it has been previously disabled 
+- ```disable()```: disables all the bars that will not be shown until the next enabling 
+
+and provide ```isEnabled``` variable to know if progress bar is enabled.  
+Enabled by default.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

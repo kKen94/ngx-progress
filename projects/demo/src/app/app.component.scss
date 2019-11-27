@@ -68,7 +68,7 @@
 
     li {
       position: relative;
-      margin: 3.2em 0;
+      margin: 0.5em 0;
       line-height: 3.2rem;
       text-transform: uppercase;
       text-decoration: none;
@@ -135,7 +135,7 @@
 
   @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .nav ul li {
-      margin: 1.5em 0;
+      margin: 0.5em 0;
       &::after {
         bottom: 0;
       }
