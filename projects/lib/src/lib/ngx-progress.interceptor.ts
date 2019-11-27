@@ -23,7 +23,7 @@ export class NgxProgressInterceptor implements HttpInterceptor {
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-  constructor(private progressService: NgxProgressService) {}
+  constructor(private readonly progressService: NgxProgressService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(
