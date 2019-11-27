@@ -9,7 +9,7 @@ import {
 } from '@angular/router';
 import { NgxProgressService } from './ngx-progress.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { NgxProgressInterceptor } from './ngx-progress.interceptor';
+import { ErrorInterceptor, NgxProgressInterceptor } from './ngx-progress.interceptor';
 import { BarModule } from './bar.module';
 
 /***********************     HTTP ONLY         **************************/
@@ -17,7 +17,10 @@ import { BarModule } from './bar.module';
 @NgModule({
   imports: [HttpClientModule, BarModule],
   exports: [HttpClientModule, BarModule],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
 })
 export class NgxProgressOnlyHttpModule {}
 
@@ -38,7 +41,10 @@ export class NgxProgressOnlyRouterModule {
 @NgModule({
   imports: [HttpClientModule, RouterModule, BarModule],
   exports: [HttpClientModule, RouterModule, BarModule],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
 })
 export class NgxProgressModule {
   constructor(router: Router, private readonly progressService: NgxProgressService) {
