@@ -1,4 +1,4 @@
-<ng-container>
+<ng-container *ngIf="progressService.isEnable">
   <div class="overlay" *ngIf="progressService.isStarted && overlay"></div>
   <ngx-vendor-bar
     [includeSpinner]="showSpinner"

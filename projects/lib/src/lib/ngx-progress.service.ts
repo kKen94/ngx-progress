@@ -7,6 +7,14 @@ export class NgxProgressService {
   private readonly endEmitter = new Subject();
   private readonly startEmitter = new Subject();
 
+  private _isEnable = true;
+  get isEnable(): boolean {
+    return this._isEnable;
+  }
+  set isEnable(isEnable) {
+    this._isEnable = isEnable;
+  }
+
   /**
    * Tells when progress ends
    */
@@ -78,5 +86,19 @@ export class NgxProgressService {
    */
   set(value: number): void {
     this.vendorBarService.set(value);
+  }
+
+  /**
+   * Enable bars if it has been previously disabled
+   */
+  enable(): void {
+    this.isEnable = true;
+  }
+
+  /**
+   * Disable bars
+   */
+  disable(): void {
+    this.isEnable = false;
   }
 }
