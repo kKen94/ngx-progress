@@ -14,9 +14,6 @@ export class NgxProgressService {
   get isEnable(): boolean {
     return this._isEnable;
   }
-  set isEnable(isEnable) {
-    this._isEnable = isEnable;
-  }
 
   /**
    * Tells when progress ends
@@ -31,7 +28,7 @@ export class NgxProgressService {
   isStarted: boolean;
   progressCount = 0;
 
-  constructor(private readonly vendorBarService: BarService) {}
+  constructor(private readonly barService: BarService) {}
 
   /**
    * Starts progress bar.
@@ -40,7 +37,7 @@ export class NgxProgressService {
    */
   start(): void {
     if (this.progressCount === 0) {
-      this.vendorBarService.start();
+      this.barService.start();
       this.isStarted = true;
       this.startEmitter.next();
     }
@@ -57,7 +54,7 @@ export class NgxProgressService {
     }
     setTimeout(() => {
       if (this.progressCount === 0) {
-        this.vendorBarService.complete();
+        this.barService.complete();
         this.isStarted = false;
         this.endEmitter.next();
       }
@@ -68,7 +65,7 @@ export class NgxProgressService {
    * Force reset of the progress bar
    */
   reset(): void {
-    this.vendorBarService.start();
+    this.barService.start();
     this.isStarted = true;
     this.progressCount++;
     this.startEmitter.next();
@@ -78,7 +75,7 @@ export class NgxProgressService {
    * Force the end of the progress
    */
   terminate(): void {
-    this.vendorBarService.complete();
+    this.barService.complete();
     this.isStarted = false;
     this.endEmitter.next();
   }
@@ -88,20 +85,20 @@ export class NgxProgressService {
    * @param value: The value at which to set the progress bar
    */
   set(value: number): void {
-    this.vendorBarService.set(value);
+    this.barService.set(value);
   }
 
   /**
    * Enable bars if it has been previously disabled
    */
   enable(): void {
-    this.isEnable = true;
+    this._isEnable = true;
   }
 
   /**
    * Disables all the bars that will not be shown until the next enabling
    */
   disable(): void {
-    this.isEnable = false;
+    this._isEnable = false;
   }
 }

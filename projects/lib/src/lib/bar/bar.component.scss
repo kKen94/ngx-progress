@@ -1,29 +1,6 @@
-/* Make clicks pass-through */
-
 :host {
   position: relative;
   display: block;
-
-  &.loading-bar-fixed > div {
-    .bar {
-      position: fixed;
-    }
-
-    &#loading-bar-spinner {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-
-      [dir="rtl"] & {
-        right: 10px;
-        left: unset;
-      }
-    }
-
-    .peg {
-      display: block;
-    }
-  }
 
   > div {
     pointer-events: none;
@@ -49,7 +26,6 @@
       }
     }
 
-    /* Fancy blur effect */
     .peg {
       display: none;
       position: absolute;
@@ -63,17 +39,17 @@
       border-radius: 100%;
     }
 
-    // loading-bar-spinner
-    &#loading-bar-spinner {
+    &.spinner {
       display: block;
       position: absolute;
       z-index: 10002;
       top: 5px;
       left: 0;
-      .spinner-icon {
+      padding-left: 5px;
+
+      .icon {
         width: 14px;
         height: 14px;
-
         border: solid 2px transparent;
         border-top-color: inherit;
         border-left-color: inherit;

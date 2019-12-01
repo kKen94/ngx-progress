@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgxProgressService } from './ngx-progress.service';
 import { RegisterService } from './register.service';
+import { BarService } from './bar/bar.service';
 
 @Component({
   selector: 'ngx-progress',
@@ -37,16 +38,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
    * The starting value of progress bar (from 1 to 100)
    */
-  _initialValue: number = undefined;
-  get initialValue(): number {
-    return this._initialValue;
-  }
-  @Input() set initialValue(initialValue: number) {
-    this._initialValue = initialValue;
-    if (initialValue !== undefined) {
-      this.progressService.set(initialValue);
-    }
-  }
+  @Input() initialValue = 0;
   /**
    * Show or hide overlay
    */

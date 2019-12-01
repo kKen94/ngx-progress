@@ -12,7 +12,16 @@ export class BarComponent {
   @Input() color: string;
   @Input() barHeight: string;
   @Input() diameter: string;
-  @Input() value: number = undefined;
+  _initialValue: number;
+  get initialValue(): number {
+    return this._initialValue;
+  }
+  @Input() set initialValue(initialValue: number) {
+    this._initialValue = initialValue;
+    if (initialValue) {
+      this.loader.set(initialValue);
+    }
+  }
   @Input() spinnerSpeed: number;
 
   constructor(public loader: BarService) {}

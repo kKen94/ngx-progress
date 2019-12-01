@@ -15,8 +15,8 @@ export class AppComponent {
   showBar = true;
   barHeight = '2px';
   spinnerDiameter = '15px';
-  initialValue: number = undefined;
-  overlay = true;
+  initialValue = 0;
+  overlay = false;
   spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
   showPicker = false;
   env = environment;
@@ -31,9 +31,7 @@ export class AppComponent {
     }
   }
 
-  constructor(private readonly progress: NgxProgressService) {
-    this.progress.start();
-  }
+  constructor(public readonly progress: NgxProgressService) { }
 
   changeColor(event: ColorEvent): void {
     this.color = event.color.hex;

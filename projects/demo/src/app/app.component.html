@@ -6,16 +6,20 @@
     <nav class="nav">
       <ul>
         <li>
+          <span>enabled</span>
+          <mat-slide-toggle [ngModel]="progress.isEnable" (toggleChange)="progress.isEnable ? progress.disable() : progress.enable()"></mat-slide-toggle>
+        </li>
+        <li>
           <span>show overlay</span>
-          <mat-checkbox [(ngModel)]="overlay"></mat-checkbox>
+          <mat-slide-toggle [(ngModel)]="overlay"></mat-slide-toggle>
         </li>
         <li>
           <span>show spinner</span>
-          <mat-checkbox [(ngModel)]="showSpinner"></mat-checkbox>
+          <mat-slide-toggle [(ngModel)]="showSpinner"></mat-slide-toggle>
         </li>
         <li>
           <span>show bar</span>
-          <mat-checkbox [(ngModel)]="showBar"></mat-checkbox>
+          <mat-slide-toggle [(ngModel)]="showBar"></mat-slide-toggle>
         </li>
         <li>
           <span class="bottom">color</span>
@@ -73,7 +77,8 @@
       [spinnerDiameter]="spinnerDiameter"
       [spinnerSpeed]="spinnerSpeed"></ngx-progress>
     <div class="full-height" fxLayout="column" fxLayoutAlign="center center">
-      <button mat-flat-button color="accent"><span style="color: #cbcbcb;">Click me</span></button>
+      <button mat-flat-button color="accent" style="margin-bottom: 1rem;" (click)="progress.start()"><span style="color: #ffffff;">Start</span></button>
+      <button mat-flat-button color="accent" (click)="progress.end()"><span style="color: #ffffff;">Complete</span></button>
     </div>
   </div>
 </div>
