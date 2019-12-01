@@ -1,9 +1,9 @@
-<ng-container *ngIf="(value ? value : loader.progress$ | async) as progress">
-  <div id="loading-bar-spinner" *ngIf="includeSpinner" [style.color]="color" style="padding-left: 5px;" [style.margin-top]="barHeight">
-    <div [style.width]="diameter" [style.height]="diameter" class="spinner-icon" [style.animation-duration]="1000/spinnerSpeed+'ms'"></div>
+<ng-container *ngIf="loader.progress">
+  <div class="spinner" *ngIf="includeSpinner" [style.color]="color" [style.margin-top]="barHeight">
+    <div [style.width]="diameter" [style.height]="diameter" class="icon" [style.animation-duration]="1000/spinnerSpeed+'ms'"></div>
   </div>
   <div id="loading-bar" *ngIf="includeBar" [style.color]="color">
-    <div class="bar" [style.background]="color" [style.height]="barHeight" [style.width]="progress + '%'">
+    <div class="bar" [style.background]="color" [style.height]="barHeight" [style.width]="loader.progress + '%'">
       <div class="peg" [style.height]="barHeight"></div>
     </div>
   </div>
