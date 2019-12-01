@@ -112,11 +112,11 @@ THE SOFTWARE.
 
 @angular/material/button
 
-@angular/material/checkbox
-
 @angular/material/form-field
 
 @angular/material/icon
+
+@angular/material/slide-toggle
 
 @angular/material/slider
 
