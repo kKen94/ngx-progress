@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/kKen94/ngx-progress/compare/v1.3.0...v1.3.1) (2020-01-09)
+
+
+### Bug Fixes
+
+* **vulnerability:** update package.json to try resolve a vulnerability ([e469478](https://github.com/kKen94/ngx-progress/commit/e4694788829cc922fd82f3f131ec5c54ef6ca8b9))
+
 # [1.3.0](https://github.com/kKen94/ngx-progress/compare/v1.2.3...v1.3.0) (2019-11-27)
 
 
