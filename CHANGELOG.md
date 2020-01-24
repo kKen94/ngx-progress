@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/kKen94/ngx-progress/compare/v1.3.1...v1.4.0) (2020-01-24)
+
+
+### Bug Fixes
+
+* **public-api:** have to export bar.module ([1aedd1f](https://github.com/kKen94/ngx-progress/commit/1aedd1fe28156a0b8b1507b80d8a5d37ebe92fad))
+
+
+### Features
+
+* **angular major:** update angular core to v9 ([b512f4a](https://github.com/kKen94/ngx-progress/commit/b512f4a1e689164aa21803cb5e541beefa208c94))
+
 ## [1.3.1](https://github.com/kKen94/ngx-progress/compare/v1.3.0...v1.3.1) (2020-01-09)
 
 
