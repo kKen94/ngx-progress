@@ -14,13 +14,13 @@
           "options": {
             "tsConfig": "projects/lib/tsconfig.lib.json",
             "project": "projects/lib/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/lib/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lib"
+    }
+  },
+  "defaultProject": "lib",
+  "cli": {
+    "analytics": "caeef3a2-8934-46b6-b462-f73e129527e6"
+  }
 }
