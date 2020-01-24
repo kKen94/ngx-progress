@@ -5,6 +5,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![license](https://img.shields.io/github/license/kKen94/ngx-progress)](http://opensource.org/licenses/MIT)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](paypal.me/nicolataddei)
 
 NgxProgress is customizable Angular library for showing a progress bar during http request and/or routing change (or all you want) and prevent user interaction.
 
@@ -110,6 +111,8 @@ Enabled by default.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Credits
+## Donate
 
-Inspired by [Aitboudad](https://github.com/aitboudad), the awesome creator of [ngx-loading-bar](https://github.com/aitboudad/ngx-loading-bar)
+Offer me a coffee ☺
+
+![donate](blue.png)
