@@ -36,8 +36,7 @@
     "interceptor"
   ],
   "peerDependencies": {
-    "@angular/common": "^8.2.13",
-    "@angular/core": "^8.2.13",
+    "@angular/core": "~9.0.0-rc.10",
     "rxjs": "~6.5.3"
   }
 }
