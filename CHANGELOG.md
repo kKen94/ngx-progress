@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/kKen94/ngx-progress/compare/v1.4.0...v1.4.1) (2020-01-30)
+
+
+### Bug Fixes
+
+* **angular version:** v9-rc10 to rc11 ([35a8987](https://github.com/kKen94/ngx-progress/commit/35a89870e1b9b44dd761438cf62bf62e4fc5b4e7))
+* **demo:** update flex-layout ([7e18674](https://github.com/kKen94/ngx-progress/commit/7e18674a50750a2faed8a7bb2e145fd97d610f0c))
+
 # [1.4.0](https://github.com/kKen94/ngx-progress/compare/v1.3.1...v1.4.0) (2020-01-24)
 
 
