@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { NgxProgressService } from '../ngx-progress.service';
 
 @Injectable({ providedIn: 'root' })
 export class BarService {
   value = 0;
   progress = 0;
   interval: number;
+
+  constructor(private readonly ngxService: NgxProgressService) {}
 
   start(): void {
     this.interval = setInterval(() => {
@@ -13,7 +16,7 @@ export class BarService {
       if (this.progress >= 100) {
         clearInterval(this.interval);
       }
-    }, 50);
+    }, 100);
   }
 
   stop(): void {
@@ -35,6 +38,9 @@ export class BarService {
   }
 
   increment(value: number): void {
+    if (!this.ngxService.isEnable) {
+      return;
+    }
     this.progress += value;
     this.value = Math.tan((this.progress / 100) * (Math.PI / 2));
   }
