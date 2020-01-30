@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/kKen94/ngx-progress/compare/v1.4.1...v1.4.2) (2020-01-30)
+
+
+### Bug Fixes
+
+* **cycle dependency:** remove NgxProgressService from BarService ([ba12bbb](https://github.com/kKen94/ngx-progress/commit/ba12bbb06b095f09841b195c75666d58991d0055))
+
 ## [1.4.1](https://github.com/kKen94/ngx-progress/compare/v1.4.0...v1.4.1) (2020-01-30)
 
 
