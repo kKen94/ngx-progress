@@ -20,7 +20,7 @@
     "adjust-version:main": "rjp package.json version $VERSION",
     "format:check": "prettier --list-different \"projects/**/*.{ts,tsx}\"",
     "format:write": "prettier --write \"projects/**/*.{ts,tsx}\"",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points --async false"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
   },
   "husky": {
     "hooks": {
