@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/kKen94/ngx-progress/compare/v1.4.2...v1.4.3) (2020-04-16)
+
+
+### Bug Fixes
+
+* **dependencier:** incorrect peer dependencies in previous commit ([3b49eff](https://github.com/kKen94/ngx-progress/commit/3b49efffd847743708a2d2071c8d9f63413a2600))
+
 ## [1.4.2](https://github.com/kKen94/ngx-progress/compare/v1.4.1...v1.4.2) (2020-01-30)
 
 
