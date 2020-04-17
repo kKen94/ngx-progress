@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NgxProgressOnlyBarModule } from '../../../lib/src/lib/ngx-progress.module';
+import { NgxProgressOnlyHttpModule } from '../../../lib/src/lib/ngx-progress.module';
 import { FormsModule } from '@angular/forms';
 import { ColorBlockModule } from 'ngx-color/block';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    NgxProgressOnlyBarModule,
+    NgxProgressOnlyHttpModule,
     FormsModule,
     ColorBlockModule,
     MatSliderModule,

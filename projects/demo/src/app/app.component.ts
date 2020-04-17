@@ -53,6 +53,6 @@ export class AppComponent {
   }
 
   async fakeRequest(): Promise<void> {
-    await this.http.get('https://github.com/kKen94/ngx-progress').toPromise();
+    await this.http.get('https://localhost:5001').toPromise();
   }
 }
