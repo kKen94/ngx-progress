@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ColorBlockModule } from 'ngx-color/block';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     MatSlideToggleModule,
+    HttpClientModule,
   ],
   bootstrap: [AppComponent],
 })
