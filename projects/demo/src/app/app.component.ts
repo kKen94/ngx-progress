@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { NgxProgressService } from '../../../lib/src/lib/ngx-progress.service';
 import { ColorEvent } from 'ngx-color';
 import { environment } from '../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,10 @@ export class AppComponent {
     }
   }
 
-  constructor(public readonly progress: NgxProgressService) { }
+  constructor(
+    public readonly progress: NgxProgressService,
+    private readonly http: HttpClient,
+  ) { }
 
   changeColor(event: ColorEvent): void {
     this.color = event.color.hex;
@@ -46,5 +50,9 @@ export class AppComponent {
       = classs.includes('active')
         ? classs.replace(' active', '')
         : classs.replace('sidebar', 'sidebar active');
+  }
+
+  async fakeRequest(): Promise<void> {
+    await this.http.get('https://localhost:5001').toPromise();
   }
 }
