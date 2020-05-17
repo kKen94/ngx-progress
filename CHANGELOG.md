@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/kKen94/ngx-progress/compare/v1.4.3...v1.5.0) (2020-05-17)
+
+
+### Bug Fixes
+
+* **demo:** change ngx progress module ([5360515](https://github.com/kKen94/ngx-progress/commit/536051520e93a33721a5a16a5b1594e497da5ec8))
+* **deps:** updates ([339003d](https://github.com/kKen94/ngx-progress/commit/339003d9158c57a3f156d99ff64b133d76600d2b))
+
+
+### Features
+
+* **demo:** add http fake request ([9c79f82](https://github.com/kKen94/ngx-progress/commit/9c79f82850db8aae6cd1e96a26f83842386e867a))
+
 ## [1.4.3](https://github.com/kKen94/ngx-progress/compare/v1.4.2...v1.4.3) (2020-04-16)
 
 
