@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { NgxProgressService } from '../ngx-progress.service';
 
 @Injectable({ providedIn: 'root' })
 export class BarService {
   value = 0;
   progress = 0;
-  interval: number;
+  interval!: number;
 
   start(): void {
     this.interval = setInterval(() => {
       this.value += 0.015;
-      this.progress = Math.round((Math.atan(this.value) / (Math.PI / 2)) * 100 * 1000) / 1000;
+      this.progress =
+        Math.round((Math.atan(this.value) / (Math.PI / 2)) * 100 * 1000) / 1000;
       if (this.progress >= 100) {
         clearInterval(this.interval);
       }

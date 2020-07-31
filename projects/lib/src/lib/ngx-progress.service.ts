@@ -10,6 +10,7 @@ export class NgxProgressService {
   /**
    * Tells if bar is enabled or not
    */
+  // tslint:disable-next-line:variable-name
   private _isEnable = true;
   get isEnable(): boolean {
     return this._isEnable;
@@ -25,7 +26,7 @@ export class NgxProgressService {
    */
   start$ = this.startEmitter.asObservable();
 
-  isStarted: boolean;
+  isStarted!: boolean;
   progressCount = 0;
 
   constructor(private readonly barService: BarService) {}
@@ -46,7 +47,8 @@ export class NgxProgressService {
 
   /**
    * Ends progress bar.
-   * If there are other requests in progress this will not disappear until those are also resolved
+   * If there are other requests in progress
+   * this will not disappear until those are also resolved
    */
   end(): void {
     if (this.progressCount > 0) {
