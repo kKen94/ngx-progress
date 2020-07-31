@@ -7,12 +7,13 @@ import { BarService } from './bar.service';
   styleUrls: ['./bar.component.scss'],
 })
 export class BarComponent {
-  @Input() includeSpinner: boolean;
-  @Input() includeBar: boolean;
-  @Input() color: string;
-  @Input() barHeight: string;
-  @Input() diameter: string;
-  _initialValue: number;
+  @Input() includeSpinner!: boolean;
+  @Input() includeBar!: boolean;
+  @Input() color!: string;
+  @Input() barHeight!: string;
+  @Input() diameter!: string;
+  // tslint:disable-next-line:variable-name
+  _initialValue!: number;
   get initialValue(): number {
     return this._initialValue;
   }
@@ -22,7 +23,7 @@ export class BarComponent {
       this.loader.set(initialValue);
     }
   }
-  @Input() spinnerSpeed: number;
+  @Input() spinnerSpeed!: number;
 
   constructor(public loader: BarService) {}
 }
