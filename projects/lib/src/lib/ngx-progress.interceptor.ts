@@ -1,14 +1,23 @@
+import {
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+  HttpResponse,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { NgxProgressService } from './ngx-progress.service';
 
 @Injectable()
 export class NgxProgressInterceptor implements HttpInterceptor {
   constructor(private readonly progressService: NgxProgressService) {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler,
+  ): Observable<HttpEvent<any>> {
     this.progressService.start();
     return next.handle(request).pipe(
       map(event => {
@@ -25,7 +34,10 @@ export class NgxProgressInterceptor implements HttpInterceptor {
 export class ErrorInterceptor implements HttpInterceptor {
   constructor(private readonly progressService: NgxProgressService) {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler,
+  ): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(
       catchError(err => {
         this.progressService.terminate();

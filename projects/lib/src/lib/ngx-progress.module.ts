@@ -1,3 +1,4 @@
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import {
   NavigationCancel,
@@ -7,52 +8,68 @@ import {
   Router,
   RouterModule,
 } from '@angular/router';
-import { NgxProgressService } from './ngx-progress.service';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { ErrorInterceptor, NgxProgressInterceptor } from './ngx-progress.interceptor';
 import { BarModule } from './bar.module';
+import {
+  ErrorInterceptor,
+  NgxProgressInterceptor,
+} from './ngx-progress.interceptor';
+import { NgxProgressService } from './ngx-progress.service';
 
-/***********************     HTTP ONLY         **************************/
+/***********************     HTTP ONLY         ************************/
 
 @NgModule({
   imports: [HttpClientModule, BarModule],
   exports: [HttpClientModule, BarModule],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NgxProgressInterceptor,
+      multi: true,
+    },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
 })
 export class NgxProgressOnlyHttpModule {}
 
-/********************         ROUTER NAVIGATION ONLY         ********************/
+/********************     ROUTER NAVIGATION ONLY         *********************/
 
 @NgModule({
   imports: [RouterModule, BarModule],
   exports: [RouterModule, BarModule],
 })
 export class NgxProgressOnlyRouterModule {
-  constructor(router: Router, private readonly progressService: NgxProgressService) {
+  constructor(
+    router: Router,
+    private readonly progressService: NgxProgressService,
+  ) {
     initRouter(router, progressService);
   }
 }
 
-/********************         HTTP AND ROUTER NAVIGATION        ********************/
+/******************     HTTP AND ROUTER NAVIGATION         *******************/
 
 @NgModule({
   imports: [HttpClientModule, RouterModule, BarModule],
   exports: [HttpClientModule, RouterModule, BarModule],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NgxProgressInterceptor, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NgxProgressInterceptor,
+      multi: true,
+    },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
 })
 export class NgxProgressModule {
-  constructor(router: Router, private readonly progressService: NgxProgressService) {
+  constructor(
+    router: Router,
+    private readonly progressService: NgxProgressService,
+  ) {
     initRouter(router, progressService);
   }
 }
 
-/*******************         ONLY PROGRESSBAR          ********************/
+/***********************     ONLY PROGRESSBAR         ************************/
 
 @NgModule({
   imports: [BarModule],
@@ -60,11 +77,11 @@ export class NgxProgressModule {
 })
 export class NgxProgressOnlyBarModule {}
 
-/*****************************************************************************************/
+/*********************** methods          ************************/
 
 const getCurrentNavigationState = (router: Router) => {
-  const currentNavigation = router.getCurrentNavigation && router.getCurrentNavigation();
-  if (currentNavigation && currentNavigation.extras) {
+  const currentNavigation = router.getCurrentNavigation();
+  if (currentNavigation?.extras) {
     return currentNavigation.extras.state;
   }
 
@@ -82,7 +99,11 @@ const initRouter = (router: Router, progressService: NgxProgressService) => {
       progressService.start();
     }
 
-    if (event instanceof NavigationError || event instanceof NavigationEnd || event instanceof NavigationCancel) {
+    if (
+      event instanceof NavigationError ||
+      event instanceof NavigationEnd ||
+      event instanceof NavigationCancel
+    ) {
       progressService.end();
     }
   });

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxProgressComponent } from './ngx-progress.component';
+import { NgModule } from '@angular/core';
 import { BarComponent } from './bar/bar.component';
+import { NgxProgressComponent } from './ngx-progress.component';
 
 @NgModule({
   imports: [CommonModule],
