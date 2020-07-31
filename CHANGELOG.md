@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/kKen94/ngx-progress/compare/v1.5.0...v1.5.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* **npm update:** forced ([5a985ef](https://github.com/kKen94/ngx-progress/commit/5a985ef3006259ebebf152b89e3b80caa1fd9154))
+
 # [1.5.0](https://github.com/kKen94/ngx-progress/compare/v1.4.3...v1.5.0) (2020-05-17)
 
 
