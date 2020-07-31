@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgxProgressService } from './ngx-progress.service';
 import { RegisterService } from './register.service';
-import { BarService } from './bar/bar.service';
 
 @Component({
   selector: 'ngx-progress',

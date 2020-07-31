@@ -1,12 +1,12 @@
 # @kken94/ngx-progress
-[![Status](https://travis-ci.org/kKen94/ngx-progress.svg?branch=master)](https://travis-ci.org/kKen94/ngx-progress)
-[![npm version](https://img.shields.io/npm/v/@kken94/ngx-progress.svg?style=flat)](https://www.npmjs.com/package/@kken94/ngx-progress "View this project on npm")
-<a href="https://codeclimate.com/github/kKen94/ngx-progress/maintainability"><img src="https://api.codeclimate.com/v1/badges/53e353f983e519dfa7bc/maintainability" /></a>
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fbe1a29dad2448c8a1dfd9661eea7d79)](https://www.codacy.com/manual/kKen94/ngx-progress?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kKen94/ngx-progress&amp;utm_campaign=Badge_Grade)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![license](https://img.shields.io/github/license/kKen94/ngx-progress)](http://opensource.org/licenses/MIT)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/nicolataddei)
+[![Build Status](https://img.shields.io/travis/kKen94/ngx-progress/master?style=flat-square)](https://travis-ci.org/kKen94/ngx-progress)
+[![npm version](https://img.shields.io/npm/v/@kken94/ngx-progress.svg?style=flat-square)](https://www.npmjs.com/package/@kken94/ngx-progress "View this project on npm")
+[![CodeClimate](https://img.shields.io/codeclimate/maintainability/kKen94/ngx-progress.svg?style=flat-square)](https://api.codeclimate.com/v1/badges/53e353f983e519dfa7bc/maintainability)
+[![Codacy](https://img.shields.io/codacy/grade/fbe1a29dad2448c8a1dfd9661eea7d79?style=flat-square)](https://www.codacy.com/manual/kKen94/ngx-progress?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kKen94/ngx-progress&amp;utm_campaign=Badge_Grade)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![license](https://img.shields.io/github/license/kKen94/ngx-progress?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square)](https://paypal.me/nicolataddei)
 
 NgxProgress is customizable Angular library for showing a progress bar during http request and/or routing change (or all you want) and prevent user interaction.
 

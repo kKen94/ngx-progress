@@ -1,8 +1,8 @@
-import { Component, HostListener } from '@angular/core';
-import { NgxProgressService } from '../../../lib/src/lib/ngx-progress.service';
-import { ColorEvent } from 'ngx-color';
-import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Component, HostListener } from '@angular/core';
+import { ColorEvent } from 'ngx-color';
+import { NgxProgressService } from '../../../lib/src/lib/ngx-progress.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
   color = '#0984e3';
   showSpinner = true;
   showBar = true;
@@ -35,7 +34,7 @@ export class AppComponent {
   constructor(
     public readonly progress: NgxProgressService,
     private readonly http: HttpClient,
-  ) { }
+  ) {}
 
   changeColor(event: ColorEvent): void {
     this.color = event.color.hex;
@@ -45,11 +44,14 @@ export class AppComponent {
   }
 
   toggleMenu(): void {
-    const classs = (document.getElementsByTagName('ASIDE').item(0) as HTMLElement).className;
-    (document.getElementsByTagName('ASIDE').item(0) as HTMLElement).className
-      = classs.includes('active')
-        ? classs.replace(' active', '')
-        : classs.replace('sidebar', 'sidebar active');
+    const classs = (document
+      .getElementsByTagName('ASIDE')
+      .item(0) as HTMLElement).className;
+    (document
+      .getElementsByTagName('ASIDE')
+      .item(0) as HTMLElement).className = classs.includes('active')
+      ? classs.replace(' active', '')
+      : classs.replace('sidebar', 'sidebar active');
   }
 
   async fakeRequest(): Promise<void> {

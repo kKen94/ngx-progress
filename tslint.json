@@ -55,7 +55,7 @@
     ],
     "newline-before-return": false,
     "newline-per-chained-call": false,
-    "no-any": true,
+    "no-any": false,
     "no-boolean-literal-compare": true,
     "no-conflicting-lifecycle": true,
     "no-consecutive-blank-lines": false,
@@ -105,6 +105,7 @@
     "ter-arrow-parens": [true, "as-needed"],
     "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
     "template-banana-in-box": true,
+    "template-i18n": false,
     "template-no-negated-async": true,
     "typedef": [
       true,
