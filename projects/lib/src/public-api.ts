@@ -1,7 +1,3 @@
-/**
- * Public API Surface of lib
- */
-
 export { NgxProgressComponent } from './lib/ngx-progress.component';
 export {
   NgxProgressModule,
@@ -10,9 +6,4 @@ export {
   NgxProgressOnlyRouterModule,
 } from './lib/ngx-progress.module';
 export { NgxProgressService } from './lib/ngx-progress.service';
-
-/**
- * I have to export
- */
-
 export { BarModule } from './lib/bar.module';
