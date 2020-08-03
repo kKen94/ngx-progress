@@ -1,6 +1,7 @@
 <ng-container *ngIf="progressService.isEnable">
-  <div class="overlay" *ngIf="progressService.isStarted && overlay"></div>
+  <div class="progress-overlay" *ngIf="progressService.isStarted && overlay"></div>
   <ngx-vendor-bar
+    *ngIf="progressService.isStarted"
     [includeSpinner]="showSpinner"
     [includeBar]="showBar"
     [barHeight]="barHeight"

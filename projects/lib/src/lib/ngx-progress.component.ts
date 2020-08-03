@@ -17,7 +17,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
    * Show and hide circle spinner
    */
-  @Input() showSpinner = false;
+  @Input() showSpinner = true;
   /**
    * Show and hide progress bar
    */
