@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/kKen94/ngx-progress/compare/v1.5.1...v1.5.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* **bar service:** not disappear after complete ([19e498e](https://github.com/kKen94/ngx-progress/commit/19e498eb72ef5bed26bfb328eeae794c0155efad))
+
 ## [1.5.1](https://github.com/kKen94/ngx-progress/compare/v1.5.0...v1.5.1) (2020-07-31)
 
 
