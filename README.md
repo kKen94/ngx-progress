@@ -77,7 +77,7 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 | Input                  | Description        | Default value   |
 | ---------------------- | ------------------ | --------------- |
 | ```color```         |                    | ```#0984e3```   |
-| ```showSpinner```      |                    | ```false```     |
+| ```showSpinner```      |                    | ```true```     |
 | ```showBar```          |                    | ```true```      |
 | ```barHeight```        |                    | ```1px```       |
 | ```spinnerDiameter```  |                    | ```10px```      |
