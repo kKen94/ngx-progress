@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/kKen94/ngx-progress/compare/v1.5.2...v1.5.3) (2020-08-03)
+
+
+### Bug Fixes
+
+* **spinner style:** set correct property to color spinner ([ad54303](https://github.com/kKen94/ngx-progress/commit/ad54303c21ea76d4c3c91b7b35caf9b85bacd2b8))
+
 ## [1.5.2](https://github.com/kKen94/ngx-progress/compare/v1.5.1...v1.5.2) (2020-08-03)
 
 
