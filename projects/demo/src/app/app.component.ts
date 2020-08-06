@@ -16,7 +16,8 @@ export class AppComponent {
   barHeight = '2px';
   spinnerDiameter = '15px';
   initialValue = 0;
-  overlay = false;
+  overlay = true;
+  overlayValue = 0.5;
   spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
   showPicker = false;
   env = environment;
