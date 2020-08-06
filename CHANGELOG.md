@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/kKen94/ngx-progress/compare/v1.5.3...v1.6.0) (2020-08-06)
+
+
+### Features
+
+* **overlay:** add property to customize overlay value ([b7ae255](https://github.com/kKen94/ngx-progress/commit/b7ae255bb53520102c0d90836eb0198e53be71cd))
+
 ## [1.5.3](https://github.com/kKen94/ngx-progress/compare/v1.5.2...v1.5.3) (2020-08-03)
 
 
