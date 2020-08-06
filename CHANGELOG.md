@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/kKen94/ngx-progress/compare/v1.6.0...v1.6.1) (2020-08-06)
+
+
+### Performance Improvements
+
+* **demo:** add overlay value input ([aff22b4](https://github.com/kKen94/ngx-progress/commit/aff22b4e24738aa9d742b485668c26d76a9bf8ff))
+
 # [1.6.0](https://github.com/kKen94/ngx-progress/compare/v1.5.3...v1.6.0) (2020-08-06)
 
 
