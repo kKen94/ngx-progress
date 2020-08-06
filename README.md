@@ -60,7 +60,7 @@ and place it into the element you want to cover.
 Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 ```
 <div style="position: relative">
-  <ngx-progress [overlay]="true"></ngx-progress>
+  <ngx-progress></ngx-progress>
   <table></table>
 </div>
 ```
@@ -83,6 +83,7 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 | ```spinnerDiameter```  |                    | ```10px```      |
 | ```initialValue```     | From 1 to 100      | ```undefined``` |
 | ```overlay```          | Show overlay that prevent user click | ```true```      |
+| ```overlayValue```     | From 0 to 1        | ```1```      |
 | ```spinnerSpeed```     | From 1 to 10       | ```4```         |
 
 

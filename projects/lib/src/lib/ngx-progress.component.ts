@@ -43,6 +43,10 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    */
   @Input() overlay = true;
   /**
+   * Set overlay value (opacity)
+   */
+  @Input() overlayValue = 1;
+  /**
    * Set spinner speed, from 1 to 10
    */
   @Input() spinnerSpeed: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 = 4;
