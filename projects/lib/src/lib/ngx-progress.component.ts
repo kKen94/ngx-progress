@@ -27,6 +27,10 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    */
   @Input() showBar = true;
   /**
+   * If true set indeterminate bar style, like Material
+   */
+  @Input() indeterminate = false;
+  /**
    * Height of progress bar.
    *
    * Default height style attributes format ('1px', '1%', ...)

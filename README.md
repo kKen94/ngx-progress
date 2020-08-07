@@ -83,14 +83,15 @@ You can filter the HTTP requests that would like to be avoided by the intercepto
 
 | Input                  | Description        | Default value   |
 | ---------------------- | ------------------ | --------------- |
-| ```color```         |                    | ```#0984e3```   |
-| ```showSpinner```      |                    | ```true```     |
+| ```color```            |                    | ```#0984e3```   |
+| ```showSpinner```      |                    | ```true```      |
 | ```showBar```          |                    | ```true```      |
+| ```indeterminate```    | Indeterminate style like Material                   | ```false```      |
 | ```barHeight```        |                    | ```1px```       |
 | ```spinnerDiameter```  |                    | ```10px```      |
 | ```initialValue```     | From 1 to 100      | ```undefined``` |
 | ```overlay```          | Show overlay that prevent user click | ```true```      |
-| ```overlayValue```     | From 0 to 1        | ```1```      |
+| ```overlayValue```     | From 0 to 1        | ```1```         |
 | ```spinnerSpeed```     | From 1 to 10       | ```4```         |
 
 

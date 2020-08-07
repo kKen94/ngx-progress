@@ -28,6 +28,10 @@
           <mat-slide-toggle [(ngModel)]="showBar"></mat-slide-toggle>
         </li>
         <li>
+          <span>indeterminate</span>
+          <mat-slide-toggle [(ngModel)]="indeterminate"></mat-slide-toggle>
+        </li>
+        <li>
           <span class="bottom">color</span>
           <div class="square" [style.background-color]="color" (click)="showPicker = !showPicker;"></div>
           <color-block class="picker" *ngIf="showPicker" [triangle]="'hide'" [color]="color" (onChangeComplete)="changeColor($event)"></color-block>
@@ -81,6 +85,7 @@
       [overlay]="overlay"
       [overlayValue]="overlayValue"
       [showBar]="showBar"
+      [indeterminate]="indeterminate"
       [spinnerDiameter]="spinnerDiameter"
       [spinnerSpeed]="spinnerSpeed"></ngx-progress>
     <div class="full-height" fxLayout="column" fxLayoutAlign="center center">
