@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/kKen94/ngx-progress/compare/v1.6.1...v1.7.0) (2020-08-07)
+
+
+### Features
+
+* **indeterminate bar:** add property to enable indeterminate bar style ([d701dc3](https://github.com/kKen94/ngx-progress/commit/d701dc395d19269868398995d808472c45cdc0a0))
+* **request filtering:** now some url can be whitlisted ([82cf63c](https://github.com/kKen94/ngx-progress/commit/82cf63c23d2eec0d2c922f69d5b7b106db663cbf))
+
 ## [1.6.1](https://github.com/kKen94/ngx-progress/compare/v1.6.0...v1.6.1) (2020-08-06)
 
 
