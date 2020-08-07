@@ -4,6 +4,16 @@ import { BarService } from './bar/bar.service';
 
 @Injectable({ providedIn: 'root' })
 export class NgxProgressService {
+  // tslint:disable-next-line:variable-name
+  _regexUrl: RegExp[] = [];
+  /**
+   * Is done the mapping from string to regex on variable assignment
+   * @param patterns: the whitelist
+   */
+  set regexUrl(patterns: string[]) {
+    this._regexUrl = patterns.map(p => new RegExp(p));
+  }
+
   private readonly endEmitter = new Subject();
   private readonly startEmitter = new Subject();
 

@@ -65,10 +65,17 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 </div>
 ```
 
-## Feature
+## Features
 
 - NgxProgress supports multiple requests. If during the bar progress another request is fired, bar will not reset and keep going until all requests are completed.  
 - NgxProgress can be instantiated multiple times. Only the deepest one will be displayed
+
+#### Requests filtering
+
+You can filter the HTTP requests that would like to be avoided by the interceptor by providing an array of regex patterns:
+```
+  <ngx-progress [whitelist]="['auth', '[a-zA-Z]']"></ngx-progress>
+```
 
 ## Configuration
 

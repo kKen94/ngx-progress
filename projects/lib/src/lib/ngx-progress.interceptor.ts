@@ -18,6 +18,11 @@ export class NgxProgressInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler,
   ): Observable<HttpEvent<any>> {
+    for (const regexUrlItem of this.progressService._regexUrl) {
+      if (regexUrlItem.test(request.url)) {
+        return next.handle(request);
+      }
+    }
     this.progressService.start();
     return next.handle(request).pipe(
       map(event => {
