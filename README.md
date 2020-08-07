@@ -65,10 +65,17 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 </div>
 ```
 
-## Feature
+## Features
 
 - NgxProgress supports multiple requests. If during the bar progress another request is fired, bar will not reset and keep going until all requests are completed.  
 - NgxProgress can be instantiated multiple times. Only the deepest one will be displayed
+
+#### Requests filtering
+
+You can filter the HTTP requests that would like to be avoided by the interceptor by providing an array of regex patterns:
+```
+  <ngx-progress [whitelist]="['auth', '[a-zA-Z]']"></ngx-progress>
+```
 
 ## Configuration
 
@@ -76,14 +83,15 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 
 | Input                  | Description        | Default value   |
 | ---------------------- | ------------------ | --------------- |
-| ```color```         |                    | ```#0984e3```   |
-| ```showSpinner```      |                    | ```true```     |
+| ```color```            |                    | ```#0984e3```   |
+| ```showSpinner```      |                    | ```true```      |
 | ```showBar```          |                    | ```true```      |
+| ```indeterminate```    | Indeterminate style like Material                   | ```false```      |
 | ```barHeight```        |                    | ```1px```       |
 | ```spinnerDiameter```  |                    | ```10px```      |
 | ```initialValue```     | From 1 to 100      | ```undefined``` |
 | ```overlay```          | Show overlay that prevent user click | ```true```      |
-| ```overlayValue```     | From 0 to 1        | ```1```      |
+| ```overlayValue```     | From 0 to 1        | ```1```         |
 | ```spinnerSpeed```     | From 1 to 10       | ```4```         |
 
 

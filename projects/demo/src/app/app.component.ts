@@ -13,6 +13,7 @@ export class AppComponent {
   color = '#0984e3';
   showSpinner = true;
   showBar = true;
+  indeterminate = false;
   barHeight = '2px';
   spinnerDiameter = '15px';
   initialValue = 0;

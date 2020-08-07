@@ -2,9 +2,12 @@
   <div class="spinner" *ngIf="includeSpinner" [style.border-color]="color" [style.margin-top]="barHeight">
     <div [style.width]="diameter" [style.height]="diameter" class="icon" [style.animation-duration]="1000/spinnerSpeed+'ms'"></div>
   </div>
-  <div id="loading-bar" *ngIf="includeBar" [style.color]="color">
-    <div class="bar" [style.background]="color" [style.height]="barHeight" [style.width]="loader.progress + '%'">
+  <div *ngIf="includeBar" [style.color]="color">
+    <div class="bar" *ngIf="!indeterminate" [style.background]="color" [style.height]="barHeight" [style.width]="loader.progress + '%'">
       <div class="peg" [style.height]="barHeight"></div>
+    </div>
+    <div class="progress" *ngIf="indeterminate" [style.height]="barHeight">
+      <div class="indeterminate" [style.background]="color"></div>
     </div>
   </div>
 </ng-container>

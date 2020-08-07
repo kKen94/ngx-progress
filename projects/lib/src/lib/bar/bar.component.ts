@@ -12,6 +12,7 @@ export class BarComponent {
   @Input() color!: string;
   @Input() barHeight!: string;
   @Input() diameter!: string;
+  @Input() indeterminate!: string;
   // tslint:disable-next-line:variable-name
   _initialValue!: number;
   get initialValue(): number {

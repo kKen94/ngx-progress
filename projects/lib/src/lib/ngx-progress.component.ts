@@ -9,6 +9,10 @@ import { RegisterService } from './register.service';
 })
 export class NgxProgressComponent implements OnInit, OnDestroy {
   /**
+   * String array with regex pattern to avoid loader on specified apis
+   */
+  @Input() whitelist: string[] = [];
+  /**
    * Color of spinner and progress bar.
    *
    * Default color style attributes format ('#0984e3', 'rgb(169, 86, 90)', ...)
@@ -22,6 +26,10 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
    * Show and hide progress bar
    */
   @Input() showBar = true;
+  /**
+   * If true set indeterminate bar style, like Material
+   */
+  @Input() indeterminate = false;
   /**
    * Height of progress bar.
    *
@@ -62,6 +70,7 @@ export class NgxProgressComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.progressService.regexUrl = this.whitelist;
     this.register.registerBar(this.self);
   }
 }
