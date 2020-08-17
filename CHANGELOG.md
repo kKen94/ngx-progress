@@ -1,3 +1,11 @@
+## [1.7.1](https://github.com/kKen94/ngx-progress/compare/v1.7.0...v1.7.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* **peer dependencies:** update ([353267a](https://github.com/kKen94/ngx-progress/commit/353267a0f1f30785fdbb8f42d07757d0d6f0154f))
+* **yarn.lock:** set correct registry ([1b37ce1](https://github.com/kKen94/ngx-progress/commit/1b37ce14174d1a828e09b1db4e9ea32c812c142c))
+
 # [1.7.0](https://github.com/kKen94/ngx-progress/compare/v1.6.1...v1.7.0) (2020-08-07)
 
 
