@@ -36,8 +36,8 @@
     "interceptor"
   ],
   "peerDependencies": {
-    "@angular/core": "~9.1.2",
-    "rxjs": "~6.5.5"
+    "@angular/core": "~10.0.9",
+    "rxjs": "~6.6.2"
   },
   "dependencies": {
     "tslib": "^2.0.0"
