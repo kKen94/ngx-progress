@@ -11,12 +11,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorBlockModule } from 'ngx-color/block';
-import {
-  NgxProgressHttpModule,
-  NgxProgressModule,
-} from '../../../lib/src/lib/ngx-progress.module';
+import { NgxProgressHttpModule } from '../../../lib/src/lib/ngx-progress.module';
+import { Options } from '../../../lib/src/lib/symbols';
 import { AppComponent } from './app.component';
 import { FakeHttpInterceptor } from './fake.interceptor';
+
+const progressOptions: Options = {
+  indeterminate: true,
+};
 
 @NgModule({
   declarations: [AppComponent],

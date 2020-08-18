@@ -1,14 +1,14 @@
 <ng-container *ngIf="progressService.isEnable">
-  <div class="progress-overlay" *ngIf="progressService.isStarted && overlay" [style.opacity]="overlayValue"></div>
+  <div class="progress-overlay" *ngIf="progressService.isStarted && options.overlay" [style.opacity]="options.overlayValue"></div>
   <ngx-vendor-bar
     *ngIf="progressService.isStarted"
-    [includeSpinner]="showSpinner"
-    [includeBar]="showBar"
-    [indeterminate]="indeterminate"
-    [barHeight]="barHeight"
-    [color]="color"
-    [diameter]="spinnerDiameter"
-    [spinnerSpeed]="spinnerSpeed"
-    [initialValue]="initialValue"
+    [includeSpinner]="options.showSpinner"
+    [includeBar]="options.showBar"
+    [indeterminate]="options.indeterminate"
+    [barHeight]="options.barHeight"
+    [color]="options.color"
+    [diameter]="options.spinnerDiameter"
+    [spinnerSpeed]="options.spinnerSpeed"
+    [initialValue]="options.initialValue"
   ></ngx-vendor-bar>
 </ng-container>

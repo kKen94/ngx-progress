@@ -1,15 +1,34 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
 import { BarModule } from './bar.module';
 import {
   ErrorInterceptor,
   NgxProgressInterceptor,
 } from './ngx-progress.interceptor';
-import { WHITELIST } from './symbols';
+import { getOptions, OPTIONS, Options } from './symbols';
+
+const OPT = new InjectionToken('OPT');
+const opt = {
+  color: '#0984e3',
+  showSpinner: true,
+  showBar: true,
+  indeterminate: false,
+  barHeight: '1px',
+  spinnerDiameter: '10px',
+  initialValue: 0,
+  overlay: true,
+  overlayValue: 1,
+  spinnerSpeed: 4,
+};
 
 /***********************     HTTP ONLY         ************************/
 
 const HTTP_PROVIDERS = [
+  {
+    provide: OPTIONS,
+    useFactory: getOptions,
+    deps: [OPT],
+  },
   {
     provide: HTTP_INTERCEPTORS,
     useClass: NgxProgressInterceptor,
@@ -26,25 +45,25 @@ const HTTP_PROVIDERS = [
   imports: [HttpClientModule, BarModule],
   exports: [HttpClientModule, BarModule],
   providers: [
-    ...HTTP_PROVIDERS,
     {
-      provide: WHITELIST,
-      useValue: [],
+      provide: OPT,
+      useValue: opt,
     },
+    ...HTTP_PROVIDERS,
   ],
 })
 export class NgxProgressHttpModule {
   static forRoot(
-    whitelist: string[],
+    options?: Options,
   ): ModuleWithProviders<NgxProgressHttpModule> {
     return {
       ngModule: NgxProgressHttpModule,
       providers: [
-        ...HTTP_PROVIDERS,
         {
-          provide: WHITELIST,
-          useValue: whitelist,
+          provide: OPT,
+          useValue: options,
         },
+        ...HTTP_PROVIDERS,
       ],
     };
   }
@@ -55,5 +74,35 @@ export class NgxProgressHttpModule {
 @NgModule({
   imports: [BarModule],
   exports: [BarModule],
+  providers: [
+    {
+      provide: OPT,
+      useValue: opt,
+    },
+    {
+      provide: OPTIONS,
+      useFactory: getOptions,
+      deps: [OPT],
+    },
+  ],
 })
-export class NgxProgressModule {}
+export class NgxProgressModule {
+  static forRoot(
+    options?: Options,
+  ): ModuleWithProviders<NgxProgressHttpModule> {
+    return {
+      ngModule: NgxProgressHttpModule,
+      providers: [
+        {
+          provide: OPT,
+          useValue: options,
+        },
+        {
+          provide: OPTIONS,
+          useFactory: getOptions,
+          deps: [OPT],
+        },
+      ],
+    };
+  }
+}

@@ -9,7 +9,7 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { NgxProgressService } from './ngx-progress.service';
-import { WHITELIST } from './symbols';
+import { Options, OPTIONS } from './symbols';
 
 @Injectable()
 export class NgxProgressInterceptor implements HttpInterceptor {
@@ -25,9 +25,10 @@ export class NgxProgressInterceptor implements HttpInterceptor {
 
   constructor(
     private readonly progressService: NgxProgressService,
-    @Inject(WHITELIST) private readonly whitelist: string[],
+    @Inject(OPTIONS) private readonly options: Options,
   ) {
-    this.regexUrl = whitelist;
+    // tslint:disable-next-line:no-non-null-assertion
+    this.regexUrl = options.whitelist!;
   }
 
   intercept(
