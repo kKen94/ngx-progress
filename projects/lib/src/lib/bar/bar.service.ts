@@ -24,11 +24,11 @@ export class BarService {
   complete(): Promise<unknown> {
     this.set(99);
     return new Promise(resolve => {
-      return setTimeout(() => {
+      setTimeout(() => {
         clearInterval(this.interval);
         this.progress = 0;
         this.value = 0;
-        return resolve;
+        resolve();
       }, 200);
     });
   }
