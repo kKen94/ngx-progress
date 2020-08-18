@@ -55,10 +55,15 @@ export class NgxProgressService {
       this.progressCount--;
     }
     if (this.progressCount === 0) {
-      this.barService.complete().then(() => {
-        this.isStarted = false;
-        this.endEmitter.next();
-      });
+      this.barService
+        .complete()
+        .then(() => {
+          this.isStarted = false;
+          this.endEmitter.next();
+        })
+        .catch(error => {
+          throw new Error(error);
+        });
     }
   }
 
@@ -76,10 +81,15 @@ export class NgxProgressService {
    * Force the end of the progress
    */
   terminate(): void {
-    this.barService.complete().then(() => {
-      this.isStarted = false;
-      this.endEmitter.next();
-    });
+    this.barService
+      .complete()
+      .then(() => {
+        this.isStarted = false;
+        this.endEmitter.next();
+      })
+      .catch(error => {
+        throw new Error(error);
+      });
   }
 
   /**

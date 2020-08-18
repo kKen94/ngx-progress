@@ -21,7 +21,7 @@ export class BarService {
     clearInterval(this.interval);
   }
 
-  complete(): Promise<unknown> {
+  async complete(): Promise<unknown> {
     this.set(99);
     return new Promise(resolve => {
       setTimeout(() => {
