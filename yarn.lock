@@ -130,7 +130,7 @@
 
 "@angular/animations@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fanimations/-/animations-10.0.10.tgz#c4f872e2917e9e7d4ffd04a64539e2aae67eef0c"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-10.0.10.tgz#c4f872e2917e9e7d4ffd04a64539e2aae67eef0c"
   integrity sha512-lIbNeLVVl9bO41orPFpKoobCvxZIZ2wdcKJBEFtQiOdw0khRQQ8k7so4TAWOZXRJR+MkOUCjU2pO8gbMXgBweQ==
   dependencies:
     tslib "^2.0.0"
@@ -172,14 +172,14 @@
 
 "@angular/common@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fcommon/-/common-10.0.10.tgz#405c3640449bbf9f2c3c764be93a91749cb931d4"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-10.0.10.tgz#405c3640449bbf9f2c3c764be93a91749cb931d4"
   integrity sha512-p6/pTk0s0Ai5uUkOHHFZwp+TjxRNPldPxTU2LVxg2xuBEQTO53BsfBKn3zi74epdb1kBC0Yjdj6yEL4dITBs7A==
   dependencies:
     tslib "^2.0.0"
 
 "@angular/compiler-cli@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fcompiler-cli/-/compiler-cli-10.0.10.tgz#11ec0754f5990d5dc351fd04f63ea1fececb225e"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-10.0.10.tgz#11ec0754f5990d5dc351fd04f63ea1fececb225e"
   integrity sha512-XkvWdJKr6HkyzAbcmy99HyDR4z949z9nHGwHNLBQjLbkX11i03fvS3bI5kgwqtNiLWYqxiPfXnpAyLBeFghCcw==
   dependencies:
     canonical-path "1.0.0"
@@ -203,7 +203,7 @@
 
 "@angular/compiler@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fcompiler/-/compiler-10.0.10.tgz#e2e6dff08b7c234219b13d71247d6fd452b2f8b3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-10.0.10.tgz#e2e6dff08b7c234219b13d71247d6fd452b2f8b3"
   integrity sha512-fO7kml0HUgnMa5eviKUk+j7NACASkoMAEgvbcVdKmGsSDu9YVkaqSdLXuj2vu9glSJWDRkZJKSrt9MzbmhyB5A==
   dependencies:
     tslib "^2.0.0"
@@ -215,7 +215,7 @@
 
 "@angular/core@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fcore/-/core-10.0.10.tgz#10ca31d55899992e0b1585cfef4df8c40a1c60ac"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-10.0.10.tgz#10ca31d55899992e0b1585cfef4df8c40a1c60ac"
   integrity sha512-PIQhLqjZayVXJoXs4WQu7orkePqFiux19y7bgBrsSAithe+g9BkrSIdX7+tkkX0zggUWKywY92YuMZCJ/S+uiw==
   dependencies:
     tslib "^2.0.0"
@@ -229,14 +229,14 @@
 
 "@angular/forms@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fforms/-/forms-10.0.10.tgz#c9ed1728be678209beaae89f9aa257357764fb36"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-10.0.10.tgz#c9ed1728be678209beaae89f9aa257357764fb36"
   integrity sha512-bWjbsqMTiCNQZzXAfiEwT/tiAzSvChnqBimrJWNSHVYRkp71TkDcKXn6mA+E//YR0eZ84GKNNiVlKFxqkmeyqQ==
   dependencies:
     tslib "^2.0.0"
 
 "@angular/language-service@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2flanguage-service/-/language-service-10.0.10.tgz#ef01bcd48b8ce51b57c755e75c725b2b6ae43d2f"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-10.0.10.tgz#ef01bcd48b8ce51b57c755e75c725b2b6ae43d2f"
   integrity sha512-Id3hmPR5UeWAKsDeB6+O7m+4+FpUr5zcYdM8xXAzTjjn8laSuDUMb17wsAVRntPgRJv4SeaqUbWevwSkM5KExA==
 
 "@angular/material@^10.1.3":
@@ -248,21 +248,21 @@
 
 "@angular/platform-browser-dynamic@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fplatform-browser-dynamic/-/platform-browser-dynamic-10.0.10.tgz#0ae069a67c3fa7d593af554a333dd2b69d12903c"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-10.0.10.tgz#0ae069a67c3fa7d593af554a333dd2b69d12903c"
   integrity sha512-6jbn0Ldyc+80BCETGtE7pzfKlbjfa/wEPhLEGWoYtxrrJ5UB3CblGpDMOsv1ibOQijPZ/JSmIMmAxz66+pLx3g==
   dependencies:
     tslib "^2.0.0"
 
 "@angular/platform-browser@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2fplatform-browser/-/platform-browser-10.0.10.tgz#13ea3e32fb798c6d10148d38f1c9589a26f74e6d"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-10.0.10.tgz#13ea3e32fb798c6d10148d38f1c9589a26f74e6d"
   integrity sha512-srNGkvg9177skff7QOe3L+nGOSbrKLzFt3Z5O3oM0N0TWr8QlWEA+zQm8n0zLHI8AmdZbmFzAYYJiBvVCSc5RQ==
   dependencies:
     tslib "^2.0.0"
 
 "@angular/router@~10.0.10":
   version "10.0.10"
-  resolved "http://verdaccio.progetplus.it/@angular%2frouter/-/router-10.0.10.tgz#fee0fccbe00c3f4a29ddeef9fe1bcbcb8b7ad28c"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.0.10.tgz#fee0fccbe00c3f4a29ddeef9fe1bcbcb8b7ad28c"
   integrity sha512-wDmr/Spuv4OhPK5a49AvgJhaedRw4yb7nmPMd51sWqzOV31RRcGXORjiXZOcSpElLxM9f7JV0tWDR5p5ko/kPA==
   dependencies:
     tslib "^2.0.0"
