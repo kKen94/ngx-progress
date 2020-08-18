@@ -1,3 +1,27 @@
+# [2.0.0](https://github.com/kKen94/ngx-progress/compare/v1.7.1...v2.0.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* **bar:** overlay not disappear ([8282af3](https://github.com/kKen94/ngx-progress/commit/8282af31969afbb7ac9a5a27756c1b97e91b0781))
+* **promises:** handle errors ([9e6f87a](https://github.com/kKen94/ngx-progress/commit/9e6f87a6a9e390645a1db56143cfa371c87f4c8d))
+* **yarn.lock:** correct registry ([0b0a1bd](https://github.com/kKen94/ngx-progress/commit/0b0a1bdcc137656c906d636370e02ae9ac6c48ca))
+
+
+### Performance Improvements
+
+* **progress bar:** when progress ended there's a better animation ([713158f](https://github.com/kKen94/ngx-progress/commit/713158f4442a02a7e0a9b56b2033be9ebbf48bd8))
+
+
+* refactor(whitelist and modules)!: change whitelist declaration ([8496eeb](https://github.com/kKen94/ngx-progress/commit/8496eeb9f30cabc6b8b0ae0cfb380424d8d705e5))
+
+
+### BREAKING CHANGES
+
+* whitelist now must be declared with .forRoot() in module
+BREAKING CHANGES: remove router module for better management
+BREAKING CHANGES: NgxProgressModule is now the old NgxProgressOnlyBarModule
+
 ## [1.7.1](https://github.com/kKen94/ngx-progress/compare/v1.7.0...v1.7.1) (2020-08-17)
 
 
