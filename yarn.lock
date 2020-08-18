@@ -1221,10 +1221,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.2.tgz#d05f66db03e3a3638a654e8badf2deb489eb220d"
   integrity sha512-r3fwVbVH+M8W0qYlBBZFsUwKe6NT5qvz+EmU7sr8VeN1cQ63z+3cfXyTo7WGGEMEgKiT0jboNAK3b1FZp8k9LQ==
 
-"@ctrl/tinycolor@^2.6.0":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-2.6.1.tgz#0e78cc836a1fd997a9a22fa1c26c555411882160"
-  integrity sha512-xKN3lAA+xbNhP+JX3sLhzA65IGiKqun/Yf9jBlZX7Og0SxlCrrqKxqTd6ccn20fv3Cgcvq6KnjPhnmS+v7uAwQ==
+"@ctrl/tinycolor@^3.1.2":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.1.4.tgz#e27c158836e6523fd41a647bd86ec73a74aa4151"
+  integrity sha512-WHn6ClDzGS3oACt4F/k0B9QwhQCeXXRguYE6UFe6OD6wLdESU8RoMs7Y1+FEr4Tj2VZd9bfb1aEhnB9KoVrLEA==
 
 "@iarna/cli@^1.2.0":
   version "1.2.0"
@@ -7587,14 +7587,14 @@ ng-packagr@^10.0.0:
     terser "^5.0.0"
     update-notifier "^4.0.0"
 
-ngx-color@^4.1.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/ngx-color/-/ngx-color-4.1.1.tgz#4ac61cc3fc790a84bceeee5d1120dafaddff3e79"
-  integrity sha512-eWqhqc6iW7RmBF4nWRIpOCFJwoDOJm/rrdp8RJpxqcYmiuN3ZXXIcHLXK6ut2+yDb/wkI9bMdTXwC0AAgZcX/Q==
+ngx-color@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-color/-/ngx-color-6.0.1.tgz#d83d0c872b81279c43e3b8e7f3e26efe95349e41"
+  integrity sha512-RIbPm1PAxcDzDNqwkhwnbHjUD8BnOdRxeam1MhItoNu7M3ue+8ApjzNtUD6d7Jv2c6XLpNtaDJLUbGEZSoQVCA==
   dependencies:
-    "@ctrl/tinycolor" "^2.6.0"
+    "@ctrl/tinycolor" "^3.1.2"
     material-colors "^1.2.6"
-    tslib "^1.9.0"
+    tslib "^2.0.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
