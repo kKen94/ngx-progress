@@ -16,7 +16,9 @@
         <li>
           <span>overlay value</span>
           <mat-form-field>
-            <input matInput class="input" type="number" max="1" min="0" step="0.1" [(ngModel)]="overlayValue">
+            <label>
+              <input matInput class="input" type="number" max="1" min="0" step="0.1" [(ngModel)]="overlayValue">
+            </label>
           </mat-form-field>
         </li>
         <li>
@@ -39,13 +41,17 @@
         <li>
           <span>bar Height</span>
           <mat-form-field>
-            <input matInput class="input" [(ngModel)]="barHeight">
+            <label>
+              <input matInput class="input" [(ngModel)]="barHeight">
+            </label>
           </mat-form-field>
         </li>
         <li>
           <span>spinner diameter</span>
           <mat-form-field>
-            <input matInput class="input" [(ngModel)]="spinnerDiameter">
+            <label>
+              <input matInput class="input" [(ngModel)]="spinnerDiameter">
+            </label>
           </mat-form-field>
         </li>
         <li>

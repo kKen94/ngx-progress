@@ -11,10 +11,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorBlockModule } from 'ngx-color/block';
-import {
-  NgxProgressHttpModule,
-  NgxProgressModule,
-} from '../../../lib/src/lib/ngx-progress.module';
+import { NgxProgressHttpModule } from '../../../lib/src/lib/ngx-progress.module';
 import { AppComponent } from './app.component';
 import { FakeHttpInterceptor } from './fake.interceptor';
 

@@ -26,9 +26,3 @@ export class FakeHttpInterceptor implements HttpInterceptor {
       .pipe(dematerialize());
   }
 }
-
-export const fakeHttpProvider = {
-  provide: HTTP_INTERCEPTORS,
-  useClass: FakeHttpInterceptor,
-  multi: true,
-};
