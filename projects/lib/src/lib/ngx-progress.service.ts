@@ -54,13 +54,12 @@ export class NgxProgressService {
     if (this.progressCount > 0) {
       this.progressCount--;
     }
-    setTimeout(() => {
-      if (this.progressCount === 0) {
-        this.barService.complete();
+    if (this.progressCount === 0) {
+      this.barService.complete().then(() => {
         this.isStarted = false;
         this.endEmitter.next();
-      }
-    }, 200);
+      });
+    }
   }
 
   /**
@@ -77,9 +76,10 @@ export class NgxProgressService {
    * Force the end of the progress
    */
   terminate(): void {
-    this.barService.complete();
-    this.isStarted = false;
-    this.endEmitter.next();
+    this.barService.complete().then(() => {
+      this.isStarted = false;
+      this.endEmitter.next();
+    });
   }
 
   /**

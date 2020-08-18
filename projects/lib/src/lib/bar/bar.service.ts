@@ -21,13 +21,16 @@ export class BarService {
     clearInterval(this.interval);
   }
 
-  complete(): void {
+  complete(): Promise<unknown> {
     this.set(99);
-    setTimeout(() => {
-      clearInterval(this.interval);
-      this.progress = 0;
-      this.value = 0;
-    }, 100);
+    return new Promise(resolve => {
+      return setTimeout(() => {
+        clearInterval(this.interval);
+        this.progress = 0;
+        this.value = 0;
+        return resolve;
+      }, 200);
+    });
   }
 
   set(value: number): void {
