@@ -32,13 +32,11 @@ yarn add @kken94/ngx-progress
 
 Choose the most suitable module for you.  
 
-There are four modules:  
-- **NgxProgressModule** (intercept both http requests and router changes)  
-- **NgxProgressOnlyHttpModule** (intercept only http requests)  
-- **NgxProgressOnlyRouterModule** (intercept only router changes)  
-- **NgxProgressOnlyBar** (manage progress bar by yourself)  
+There are two modules:  
+- **NgxProgressModule** (manage progress bar by yourself)  
+- **NgxProgressOnlyHttpModule** (import progress bar and intercept http requests)
 
-Import one of this in your **module.ts**
+Import one of this in your ***.module.ts**
 
 ```
 import { NgxProgressModule } from '@kken94/ngx-progress';
@@ -74,7 +72,18 @@ Overlay works with ```position:absolute```, ```top:0```, ```left:0```
 
 You can filter the HTTP requests that would like to be avoided by the interceptor by providing an array of regex patterns:
 ```
-  <ngx-progress [whitelist]="['auth', '[a-zA-Z]']"></ngx-progress>
+  import { NgxProgressHttpModule } from '@kken94/ngx-progress';
+  
+  @NgModule({
+    declarations: [AppComponent],
+    imports: [
+      ...
+      NgxProgressHttpModule.forRoot(['auth', '[a-zA-Z]']),
+      ...
+    ],
+    bootstrap: [AppComponent],
+  })
+  export class AppModule {}
 ```
 
 ## Configuration
@@ -123,6 +132,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Donate
 
-Offer me a coffee ☺
+Offer me a coffee 😁
 
 [![donate](donate.png)](https://paypal.me/nicolataddei)
