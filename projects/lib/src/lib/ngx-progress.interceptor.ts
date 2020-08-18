@@ -14,13 +14,13 @@ import { WHITELIST } from './symbols';
 @Injectable()
 export class NgxProgressInterceptor implements HttpInterceptor {
   // tslint:disable-next-line:variable-name
-  _regexUrl: RegExp[] = [];
+  #_regexUrl: RegExp[] = [];
   /**
    * Is done the mapping from string to regex on variable assignment
    * @param patterns: the whitelist
    */
   set regexUrl(patterns: string[]) {
-    this._regexUrl = patterns.map(p => new RegExp(p));
+    this.#_regexUrl = patterns.map(p => new RegExp(p));
   }
 
   constructor(
@@ -34,7 +34,7 @@ export class NgxProgressInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler,
   ): Observable<HttpEvent<any>> {
-    for (const regexUrlItem of this._regexUrl) {
+    for (const regexUrlItem of this.#_regexUrl) {
       if (regexUrlItem.test(request.url)) {
         return next.handle(request);
       }

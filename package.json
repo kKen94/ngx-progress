@@ -78,7 +78,7 @@
     "lint-staged": "^10.0.2",
     "ng-packagr": "^10.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "replace-json-property": "^1.4.1",
     "semantic-release": "^17.0.1",
