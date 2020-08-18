@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -11,8 +11,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorBlockModule } from 'ngx-color/block';
-import { NgxProgressOnlyHttpModule } from '../../../lib/src/lib/ngx-progress.module';
+import { NgxProgressHttpModule } from '../../../lib/src/lib/ngx-progress.module';
 import { AppComponent } from './app.component';
+import { FakeHttpInterceptor } from './fake.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,7 @@ import { AppComponent } from './app.component';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    NgxProgressOnlyHttpModule,
+    NgxProgressHttpModule,
     FormsModule,
     ColorBlockModule,
     MatSliderModule,
@@ -32,5 +33,12 @@ import { AppComponent } from './app.component';
     HttpClientModule,
   ],
   bootstrap: [AppComponent],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakeHttpInterceptor,
+      multi: true,
+    },
+  ],
 })
 export class AppModule {}

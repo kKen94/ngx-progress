@@ -4,16 +4,6 @@ import { BarService } from './bar/bar.service';
 
 @Injectable({ providedIn: 'root' })
 export class NgxProgressService {
-  // tslint:disable-next-line:variable-name
-  _regexUrl: RegExp[] = [];
-  /**
-   * Is done the mapping from string to regex on variable assignment
-   * @param patterns: the whitelist
-   */
-  set regexUrl(patterns: string[]) {
-    this._regexUrl = patterns.map(p => new RegExp(p));
-  }
-
   private readonly endEmitter = new Subject();
   private readonly startEmitter = new Subject();
 
@@ -64,13 +54,17 @@ export class NgxProgressService {
     if (this.progressCount > 0) {
       this.progressCount--;
     }
-    setTimeout(() => {
-      if (this.progressCount === 0) {
-        this.barService.complete();
-        this.isStarted = false;
-        this.endEmitter.next();
-      }
-    }, 200);
+    if (this.progressCount === 0) {
+      this.barService
+        .complete()
+        .then(() => {
+          this.isStarted = false;
+          this.endEmitter.next();
+        })
+        .catch(error => {
+          throw new Error(error);
+        });
+    }
   }
 
   /**
@@ -87,9 +81,15 @@ export class NgxProgressService {
    * Force the end of the progress
    */
   terminate(): void {
-    this.barService.complete();
-    this.isStarted = false;
-    this.endEmitter.next();
+    this.barService
+      .complete()
+      .then(() => {
+        this.isStarted = false;
+        this.endEmitter.next();
+      })
+      .catch(error => {
+        throw new Error(error);
+      });
   }
 
   /**
