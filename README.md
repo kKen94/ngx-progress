@@ -34,18 +34,22 @@ Choose the most suitable module for you.
 
 There are two modules:  
 - **NgxProgressModule** (manage progress bar by yourself)  
-- **NgxProgressOnlyHttpModule** (import progress bar and intercept http requests)
+- **NgxProgressHttpModule** (import progress bar and intercept http requests)
 
-Import one of this in your ***.module.ts**
+*****************************************************
+
+**Warning**: to use http module import that in your app.module.ts, then import NgxProgressModule where you want to use progress bar.
+
+*****************************************************
 
 ```
-import { NgxProgressModule } from '@kken94/ngx-progress';
+import { NgxProgressHttpModule } from '@kken94/ngx-progress';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     ...
-    NgxProgressModule,
+    NgxProgressHttpModule,
     ...
   ],
   bootstrap: [AppComponent],
