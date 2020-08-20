@@ -19,13 +19,13 @@ $candy-app-warn:    mat-palette($mat-red);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.
 $candy-app-theme: mat-light-theme(
-    (
-      color: (
-        primary: $candy-app-primary,
-        accent: $candy-app-accent,
-        warn: $candy-app-warn,
-      )
+  (
+    color: (
+      primary: $candy-app-primary,
+      accent: $candy-app-accent,
+      warn: $candy-app-warn,
     )
+  )
 );
 
 // Include theme styles for core and each component used in your app.

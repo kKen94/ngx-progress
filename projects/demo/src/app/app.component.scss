@@ -146,6 +146,7 @@
   @media screen and (max-width: 1279px) {
     .nav ul li {
       margin: 0;
+
       &::after {
         bottom: 0;
       }
@@ -161,6 +162,7 @@
         flex: 1 1 150% !important;
       }
     }
+
     .nav ul li {
       &::after {
         bottom: 0;
@@ -182,30 +184,31 @@
 
   @media only screen
       and (min-device-width: 414px)
-      and (max-device-width: 736px)
-      and (-webkit-min-device-pixel-ratio: 3)
-      and (orientation: portrait) {
-        .nav ul {
-          padding: 0;
+          and (max-device-width: 736px)
+              and (-webkit-min-device-pixel-ratio: 3)
+                  and (orientation: portrait) {
+                      .nav ul {
+                        padding: 0;
 
-          li {
-            letter-spacing: 0.1rem;
-            line-height: 2rem;
-          }
-        }
+                        li {
+                          letter-spacing: 0.1rem;
+                          line-height: 2rem;
+                        }
+                      }
       }
 
   @media only screen
       and (min-device-width: 375px)
-      and (max-device-width: 667px)
-      and (-webkit-min-device-pixel-ratio: 2)
-      and (orientation: portrait) {
-        .nav ul {
-          padding: 0;
-          li {
-            letter-spacing: 0.1rem;
-            line-height: 2rem;
-          }
-        }
+          and (max-device-width: 667px)
+              and (-webkit-min-device-pixel-ratio: 2)
+                  and (orientation: portrait) {
+                      .nav ul {
+                        padding: 0;
+
+                        li {
+                          letter-spacing: 0.1rem;
+                          line-height: 2rem;
+                        }
+                      }
       }
 }
