@@ -187,14 +187,14 @@
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      .nav ul {
-        padding: 0;
+    .nav ul {
+      padding: 0;
 
-        li {
-          letter-spacing: 0.1rem;
-          line-height: 2rem;
-        }
+      li {
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
       }
+    }
     }
 
   @media only screen
@@ -202,13 +202,13 @@
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      .nav ul {
-        padding: 0;
+    .nav ul {
+      padding: 0;
 
-        li {
-          letter-spacing: 0.1rem;
-          line-height: 2rem;
-        }
+      li {
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
       }
+    }
     }
 }
