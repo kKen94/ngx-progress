@@ -55,15 +55,7 @@ export class NgxProgressService {
       this.progressCount--;
     }
     if (this.progressCount === 0) {
-      this.barService
-        .complete()
-        .then(() => {
-          this.isStarted = false;
-          this.endEmitter.next();
-        })
-        .catch(error => {
-          throw new Error(error);
-        });
+      this.terminate();
     }
   }
 
