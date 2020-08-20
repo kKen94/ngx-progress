@@ -19,7 +19,7 @@
       z-index: 10002;
 
       & .indeterminate {
-        &:before {
+        &::before {
           content: '';
           position: absolute;
           background-color: inherit;
@@ -31,7 +31,7 @@
           animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
         }
 
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background-color: inherit;
@@ -72,7 +72,7 @@
       right: 0;
       top: 0;
       height: 2px;
-      opacity: .45;
+      opacity: 0.45;
       box-shadow: 1px 0 6px 1px;
       color: inherit;
       border-radius: 100%;
@@ -100,7 +100,7 @@
 }
 
 @keyframes loading-bar-spinner {
-  0%   { transform: rotate(0deg); }
+  0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
@@ -109,10 +109,12 @@
     left: -35%;
     right: 100%;
   }
+
   60% {
     left: 100%;
     right: -90%;
   }
+
   100% {
     left: 100%;
     right: -90%;
@@ -124,10 +126,12 @@
     left: -35%;
     right: 100%;
   }
+
   60% {
     left: 100%;
     right: -90%;
   }
+
   100% {
     left: 100%;
     right: -90%;
@@ -139,10 +143,12 @@
     left: -200%;
     right: 100%;
   }
+
   60% {
     left: 107%;
     right: -8%;
   }
+
   100% {
     left: 107%;
     right: -8%;
@@ -154,10 +160,12 @@
     left: -200%;
     right: 100%;
   }
+
   60% {
     left: 107%;
     right: -8%;
   }
+
   100% {
     left: 107%;
     right: -8%;
