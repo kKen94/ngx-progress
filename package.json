@@ -54,7 +54,7 @@
     "@angular/router": "~10.1.4",
     "copyfiles": "^2.1.1",
     "ngx-color": "^6.0.1",
-    "rxjs": "~6.6.2",
+    "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
