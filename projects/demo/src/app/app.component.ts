@@ -27,7 +27,7 @@ export class AppComponent {
     if (
       !(event.target as HTMLElement).className.includes('block') &&
       !(event.target as HTMLElement).className.includes('square') &&
-      !((event.target as HTMLElement).nodeName === 'INPUT')
+      ((event.target as HTMLElement).nodeName !== 'INPUT')
     ) {
       this.showPicker = false;
     }
