@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/kKen94/ngx-progress/compare/v2.0.0...v2.1.0) (2020-10-02)
+
+
+### Features
+
+* **typescript:** support v4.0 ([92150b5](https://github.com/kKen94/ngx-progress/commit/92150b55d9480c4145719db225933fc865d2b6c3))
+
 # [2.0.0](https://github.com/kKen94/ngx-progress/compare/v1.7.1...v2.0.0) (2020-08-18)
 
 
