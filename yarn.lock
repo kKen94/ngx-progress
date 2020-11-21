@@ -221,10 +221,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/flex-layout@10.0.0-beta.32":
-  version "10.0.0-beta.32"
-  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-10.0.0-beta.32.tgz#a797ebd6f3689c71a63e99aa62f2b9cb933f5e2d"
-  integrity sha512-JvuY4dUoy5jyCTIrFiq7n30Znakh1pD3nbg0h0hs2r3t1OiDQb0ZSI1wcumosG/vYHsuJQTuNhbfaIZzA1x8nA==
+"@angular/flex-layout@^11.0.0-beta.33":
+  version "11.0.0-beta.33"
+  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-11.0.0-beta.33.tgz#c2d08f90164701b66a62b8c4365b4e22c1e95789"
+  integrity sha512-unfhw3abZuKtdwQicRStHCYGbANPTHYg4WNRQk/RC5Mxq+4WOp4Q8HI7GqRHCGUYDCGUP7w1sU/oDt8f09nM8w==
   dependencies:
     tslib "^2.0.0"
 

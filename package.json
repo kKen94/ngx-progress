@@ -1,1 +1,94 @@
-{"name":"ngx-progress","version":"2.1.0","scripts":{"ng":"ng","lint":"ng lint","semantic-release":"semantic-release","start:demo":"ng serve demo --open --port=3310","build":"yarn run build:lib && yarn run build:demo","build:lib":"ng build lib --prod && yarn run copy:files","build:demo":"ng build demo --prod --base-href /ngx-progress/","publish:lib":"npx semantic-release","publish:demo":"npx angular-cli-ghpages --dir=./dist/demo","copy:files":"yarn run copy:readme && yarn run copy:license && yarn run copy:conduct","copy:license":"copyfiles ./LICENSE.md ./dist/lib","copy:readme":"copyfiles ./README.md ./dist/lib","copy:conduct":"copyfiles ./CODE_OF_CONDUCT.md ./dist/lib","adjust-version":"npm-run-all adjust-version:*","adjust-version:lib":"rjp projects/lib/package.json version $VERSION","adjust-version:main":"rjp package.json version $VERSION","format:check":"prettier --list-different \"projects/**/*.ts\"","format:write":"prettier --write \"projects/**/*.ts\"","postinstall":"ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points --tsconfig \"tsconfig.json\""},"husky":{"hooks":{"pre-commit":"lint-staged","commit-msg":"commitlint -E HUSKY_GIT_PARAMS"}},"commitlint":{"extends":["@commitlint/config-conventional"]},"lint-staged":{"projects/**/*.ts":["pretty-quick --staged --pattern \"projects/**/*.ts\"","git add"]},"private":true,"dependencies":{"@angular/animations":"~10.1.4","@angular/cdk":"~10.2.3","@angular/common":"~10.1.4","@angular/compiler":"~10.1.4","@angular/core":"~10.1.4","@angular/flex-layout":"10.0.0-beta.32","@angular/forms":"~10.1.4","@angular/material":"^10.2.3","@angular/platform-browser":"~10.1.4","@angular/platform-browser-dynamic":"~10.1.4","@angular/router":"~10.1.4","copyfiles":"^2.1.1","ngx-color":"^6.0.1","rxjs":"~6.6.3","tslib":"^2.0.0","zone.js":"~0.10.3"},"devDependencies":{"@angular-devkit/build-angular":"~0.1001.4","@angular-devkit/build-ng-packagr":"~0.1001.4","@angular/cli":"~10.1.4","@angular/compiler-cli":"~10.1.4","@angular/language-service":"~10.1.4","@commitlint/cli":"^11.0.0","@commitlint/config-conventional":"^11.0.0","@commitlint/prompt":"^11.0.0","@semantic-release/changelog":"^5.0.0","@semantic-release/exec":"^5.0.0","@semantic-release/git":"^9.0.0","@types/node":"^12.11.1","angular-cli-ghpages":"^0.6.0","angular-tslint-rules":"^1.20.1","codelyzer":"^6.0.0","husky":"^4.0.9","lint-staged":"^10.0.2","ng-packagr":"^10.0.0","npm-run-all":"^4.1.5","prettier":"^2.0.5","pretty-quick":"^3.0.2","replace-json-property":"^1.4.1","semantic-release":"^17.2.3","ts-node":"^9.0.0","tslint":"~6.1.0","tslint-config-prettier":"^1.18.0","typescript":"^4.0.3"},"repository":{"type":"git","url":"https://github.com/kKen94/ngx-progress.git"}}
+{
+  "name": "ngx-progress",
+  "version": "2.1.0",
+  "scripts": {
+    "ng": "ng",
+    "lint": "ng lint",
+    "semantic-release": "semantic-release",
+    "start:demo": "ng serve demo --open --port=3310",
+    "build": "yarn run build:lib && yarn run build:demo",
+    "build:lib": "ng build lib --prod && yarn run copy:files",
+    "build:demo": "ng build demo --prod --base-href /ngx-progress/",
+    "publish:lib": "npx semantic-release",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
+    "copy:files": "yarn run copy:readme && yarn run copy:license && yarn run copy:conduct",
+    "copy:license": "copyfiles ./LICENSE.md ./dist/lib",
+    "copy:readme": "copyfiles ./README.md ./dist/lib",
+    "copy:conduct": "copyfiles ./CODE_OF_CONDUCT.md ./dist/lib",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp projects/lib/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION",
+    "format:check": "prettier --list-different \"projects/**/*.ts\"",
+    "format:write": "prettier --write \"projects/**/*.ts\"",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points --tsconfig \"tsconfig.json\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "projects/**/*.ts": [
+      "pretty-quick --staged --pattern \"projects/**/*.ts\"",
+      "git add"
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.1.4",
+    "@angular/cdk": "~10.2.3",
+    "@angular/common": "~10.1.4",
+    "@angular/compiler": "~10.1.4",
+    "@angular/core": "~10.1.4",
+    "@angular/flex-layout": "^11.0.0-beta.33",
+    "@angular/forms": "~10.1.4",
+    "@angular/material": "^10.2.3",
+    "@angular/platform-browser": "~10.1.4",
+    "@angular/platform-browser-dynamic": "~10.1.4",
+    "@angular/router": "~10.1.4",
+    "copyfiles": "^2.1.1",
+    "ngx-color": "^6.0.1",
+    "rxjs": "~6.6.3",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1001.4",
+    "@angular-devkit/build-ng-packagr": "~0.1001.4",
+    "@angular/cli": "~10.1.4",
+    "@angular/compiler-cli": "~10.1.4",
+    "@angular/language-service": "~10.1.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^0.6.0",
+    "angular-tslint-rules": "^1.20.1",
+    "codelyzer": "^6.0.0",
+    "husky": "^4.0.9",
+    "lint-staged": "^10.0.2",
+    "ng-packagr": "^10.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^3.0.2",
+    "replace-json-property": "^1.4.1",
+    "semantic-release": "^17.2.3",
+    "ts-node": "^9.0.0",
+    "tslint": "~6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kKen94/ngx-progress.git"
+  }
+}
