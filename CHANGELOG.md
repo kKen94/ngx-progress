@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/kKen94/ngx-progress/compare/v2.1.0...v2.1.1) (2021-01-10)
+
+
+### Bug Fixes
+
+* **dev dep:** angular 11 ([e43b806](https://github.com/kKen94/ngx-progress/commit/e43b806d078c8f7e7feae34d3e3acd81747e9434))
+
 # [2.1.0](https://github.com/kKen94/ngx-progress/compare/v2.0.0...v2.1.0) (2020-10-02)
 
 
