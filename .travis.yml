@@ -1,7 +1,7 @@
 dist: trusty
 language: node_js
 node_js:
-  - "12.13.0"
+  - "14.15.3"
 
 os:
   - linux
