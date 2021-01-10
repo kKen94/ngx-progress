@@ -199,6 +199,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+ngx-color/block
+MIT
+
 regenerator-runtime
 MIT
 MIT License
