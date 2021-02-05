@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/kKen94/ngx-progress/compare/v2.1.1...v2.1.2) (2021-01-26)
+
+
+### Bug Fixes
+
+* **angular:** update version and fix package.json ([6996638](https://github.com/kKen94/ngx-progress/commit/6996638ff81b4d06686928163b9915deeb7d0985))
+
 ## [2.1.1](https://github.com/kKen94/ngx-progress/compare/v2.1.0...v2.1.1) (2021-01-10)
 
 
