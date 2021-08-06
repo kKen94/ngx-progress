@@ -20,13 +20,8 @@
     "adjust-version:main": "rjp package.json version $VERSION",
     "format:check": "prettier --list-different \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
-    "postinstall": "ngcc"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "postinstall": "ngcc",
+    "prepare": "husky install"
   },
   "commitlint": {
     "extends": [
@@ -53,7 +48,7 @@
     "@angular/platform-browser-dynamic": "~11.1.0",
     "@angular/router": "~11.1.0",
     "copyfiles": "^2.4.1",
-    "ngx-color": "^6.2.0",
+    "ngx-color": "^7.2.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.1.0",
     "zone.js": "~0.10.3"
@@ -63,9 +58,9 @@
     "@angular/cli": "~11.1.1",
     "@angular/compiler-cli": "~11.1.0",
     "@angular/language-service": "~11.1.0",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@commitlint/prompt": "^11.0.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/prompt": "^13.1.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
@@ -73,13 +68,15 @@
     "angular-cli-ghpages": "^1.0.0-rc.1",
     "angular-tslint-rules": "^1.20.1",
     "codelyzer": "^6.0.0",
-    "husky": "^4.3.7",
-    "lint-staged": "^10.5.3",
-    "ng-packagr": "^11.0.3",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "ng-packagr": "^12.2.0",
     "npm-run-all": "^4.1.5",
+    "postcss-logical": "^4.0.2",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.0.2",
     "replace-json-property": "^1.6.3",
+    "sass": "^1.37.5",
     "semantic-release": "^17.3.1",
     "ts-node": "^9.1.1",
     "tslint": "~6.1.0",
