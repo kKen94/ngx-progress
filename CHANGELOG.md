@@ -1,3 +1,17 @@
+# [2.2.0](https://github.com/kKen94/ngx-progress/compare/v2.1.2...v2.2.0) (2021-08-07)
+
+
+### Bug Fixes
+
+* **interceptor:** Fix [#14](https://github.com/kKen94/ngx-progress/issues/14) ([5faca89](https://github.com/kKen94/ngx-progress/commit/5faca89c910395beb08d00c860feb22952acd35f))
+
+
+### Features
+
+* **angular:** update core to v12 ([8c68edd](https://github.com/kKen94/ngx-progress/commit/8c68edd1ff1ca0b910e88943ea8e27603e4d0aae))
+* **flex-layout:** update to v12 ([1dc3d54](https://github.com/kKen94/ngx-progress/commit/1dc3d54796a764241844eebd526bedcc80fed98c))
+* **material:** update to v12 ([46c0ce1](https://github.com/kKen94/ngx-progress/commit/46c0ce10a529341cdd5114cf1d78322974114c9b))
+
 ## [2.1.2](https://github.com/kKen94/ngx-progress/compare/v2.1.1...v2.1.2) (2021-01-26)
 
 
