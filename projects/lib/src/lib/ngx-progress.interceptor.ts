@@ -6,7 +6,7 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from "rxjs";
 import { catchError, map } from 'rxjs/operators';
 import { NgxProgressService } from './ngx-progress.service';
 import { WHITELIST } from './symbols';
@@ -62,7 +62,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError(err => {
         this.progressService.terminate();
-        return of(err);
+        return throwError(err);
       }),
     );
   }
