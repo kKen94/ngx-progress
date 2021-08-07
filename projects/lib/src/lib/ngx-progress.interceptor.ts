@@ -6,7 +6,7 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable, of, throwError } from "rxjs";
+import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { NgxProgressService } from './ngx-progress.service';
 import { WHITELIST } from './symbols';
