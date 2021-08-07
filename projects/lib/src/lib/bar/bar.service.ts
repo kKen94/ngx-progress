@@ -23,7 +23,7 @@ export class BarService {
 
   async complete(): Promise<unknown> {
     this.set(99);
-    return new Promise(resolve => {
+    return new Promise<void>(resolve => {
       setTimeout(() => {
         clearInterval(this.interval);
         this.progress = 0;
