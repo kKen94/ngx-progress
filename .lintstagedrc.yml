@@ -1,2 +1,3 @@
 'projects/**/src/**/\.{ts,js,html}':
-  - pretty-quick --staged,
+  - yarn run fix:eslint
+  - yarn run lint:code
