@@ -1,0 +1,2 @@
+'projects/**/src/**/\.{ts,js,html}':
+  - pretty-quick --staged,

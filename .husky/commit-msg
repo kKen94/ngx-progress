@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-commitlint -E HUSKY_GIT_PARAMS
+node node_modules/@commitlint/cli/lib/cli.js --edit "$1"
+
+#yarn commitlint --edit "$1"

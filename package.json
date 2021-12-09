@@ -20,57 +20,45 @@
     "adjust-version:main": "rjp package.json version $VERSION",
     "format:check": "prettier --list-different \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
-    "postinstall": "ngcc",
     "prepare": "husky install"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "projects/**/*.ts": [
-      "pretty-quick --staged --pattern \"projects/**/*.ts\"",
-      "git add"
-    ]
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.2.0",
+    "@angular/animations": "~13.0.3",
     "@angular/cdk": "~12.2.0",
-    "@angular/common": "~12.2.0",
-    "@angular/compiler": "~12.2.0",
-    "@angular/core": "~12.2.0",
+    "@angular/common": "~13.0.3",
+    "@angular/compiler": "~13.0.3",
+    "@angular/core": "~13.0.3",
     "@angular/flex-layout": "^12.0.0-beta.34",
-    "@angular/forms": "~12.2.0",
+    "@angular/forms": "~13.0.3",
     "@angular/material": "^12.2.0",
-    "@angular/platform-browser": "~12.2.0",
-    "@angular/platform-browser-dynamic": "~12.2.0",
-    "@angular/router": "~12.2.0",
+    "@angular/platform-browser": "~13.0.3",
+    "@angular/platform-browser-dynamic": "~13.0.3",
+    "@angular/router": "~13.0.3",
     "copyfiles": "^2.4.1",
+    "lint-staged": "^12.1.2",
     "ngx-color": "^7.2.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.0",
-    "@angular/cli": "~12.2.0",
-    "@angular/compiler-cli": "~12.2.0",
-    "@angular/language-service": "~12.2.0",
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@commitlint/prompt": "^13.1.0",
+    "@angular-devkit/build-angular": "~13.0.4",
+    "@angular/cli": "~13.0.4",
+    "@angular/compiler-cli": "~13.0.3",
+    "@angular/language-service": "~13.0.3",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/prompt": "^15.0.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "@types/node": "^14.14.20",
-    "angular-cli-ghpages": "^1.0.0-rc.1",
+    "angular-cli-ghpages": "^1.0.0",
     "angular-tslint-rules": "^1.20.1",
     "codelyzer": "^6.0.0",
     "husky": "^7.0.0",
-    "lint-staged": "^11.1.2",
-    "ng-packagr": "^12.2.0",
+    "ng-packagr": "^13.1.1",
     "npm-run-all": "^4.1.5",
     "postcss-logical": "^4.0.2",
     "prettier": "^2.2.1",
@@ -81,7 +69,7 @@
     "ts-node": "^9.1.1",
     "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "~4.3.5"
+    "typescript": "~4.4.4"
   },
   "repository": {
     "type": "git",
