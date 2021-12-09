@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/kKen94/ngx-progress/compare/v2.2.0...v2.3.0) (2021-12-09)
+
+
+### Features
+
+* **trigger publish:** bump version ([9e75c3f](https://github.com/kKen94/ngx-progress/commit/9e75c3fc5f2c678eeecb15f0af87d86bb2b6771a))
+
 # [2.2.0](https://github.com/kKen94/ngx-progress/compare/v2.1.2...v2.2.0) (2021-08-07)
 
 
