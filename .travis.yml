@@ -1,7 +1,7 @@
 dist: trusty
 language: node_js
 node_js:
-  - "14.15.3"
+  - "16.13.1"
 
 os:
   - linux
@@ -20,9 +20,9 @@ before_install:
 
 jobs:
   include:
-    - stage: lint
-      script:
-        - ng lint
+#    - stage: lint
+#      script:
+#        - ng lint
     - stage: build & publish demo
       script:
         - yarn run build:demo
