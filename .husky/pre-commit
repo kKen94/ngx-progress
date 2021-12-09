@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node node_modules/lint-staged/bin/lint-staged.js
+#node node_modules/lint-staged/bin/lint-staged.js
 
-#yarn lint-staged
+yarn lint-staged

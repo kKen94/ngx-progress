@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node node_modules/@commitlint/cli/lib/cli.js --edit "$1"
+#node node_modules/@commitlint/cli/lib/cli.js --edit "$1"
 
-#yarn commitlint --edit "$1"
+yarn commitlint --edit "$1"
