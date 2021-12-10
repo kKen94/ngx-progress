@@ -1,3 +1,11 @@
+## [2.3.1](https://github.com/kKen94/ngx-progress/compare/v2.3.0...v2.3.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **peer deps:** update rxjs peer deps ([67a4fe2](https://github.com/kKen94/ngx-progress/commit/67a4fe234eb30f2f2ca5682e3e5aa3366819dc63))
+* **rxjs:** typed Subject to avoid argument error ([86d8b1d](https://github.com/kKen94/ngx-progress/commit/86d8b1d46310563c330a83b1223bc766c4a86263))
+
 # [2.3.0](https://github.com/kKen94/ngx-progress/compare/v2.2.0...v2.3.0) (2021-12-09)
 
 
