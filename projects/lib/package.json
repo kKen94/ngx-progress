@@ -37,7 +37,7 @@
   ],
   "peerDependencies": {
     "@angular/core": "~13.1.0",
-    "rxjs": "~6.6.3"
+    "rxjs": "~7.4.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

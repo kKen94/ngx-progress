@@ -13,7 +13,7 @@ import { WHITELIST } from './symbols';
 
 @Injectable()
 export class NgxProgressInterceptor implements HttpInterceptor {
-  // tslint:disable-next-line:variable-name
+  // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
   #_regexUrl: RegExp[] = [];
   /**
    * Is done the mapping from string to regex on variable assignment

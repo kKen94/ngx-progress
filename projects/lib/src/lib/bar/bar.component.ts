@@ -13,7 +13,7 @@ export class BarComponent {
   @Input() barHeight!: string;
   @Input() diameter!: string;
   @Input() indeterminate!: boolean;
-  // tslint:disable-next-line:variable-name
+  // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
   _initialValue!: number;
   get initialValue(): number {
     return this._initialValue;

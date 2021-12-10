@@ -34,8 +34,8 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "ngx-color": "^7.2.0",
-    "rxjs": "~6.6.3",
-    "tslib": "^2.1.0",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -59,7 +59,6 @@
     "@typescript-eslint/parser": "5.3.0",
     "angular-cli-ghpages": "^1.0.0",
     "angular-tslint-rules": "^1.20.1",
-    "codelyzer": "^6.0.0",
     "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.2.0",
@@ -67,8 +66,11 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jasmine": "^4.1.3",
     "eslint-plugin-jsdoc": "^37.2.0",
+    "eslint-plugin-no-null": "latest",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-unicorn": "latest",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "ng-packagr": "^13.1.1",
@@ -85,9 +87,8 @@
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.0.1",
     "ts-node": "^9.1.1",
-    "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "~4.4.4",
+    "typescript": "~4.5.2",
     "webpack-bundle-analyzer": "^4.4.2"
   },
   "repository": {

@@ -1,0 +1,209 @@
+{
+  "extends": "../../.eslintrc.json",
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "projects/lib/tsconfig.app.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "plugins": [
+        "eslint-plugin-no-null",
+        "eslint-plugin-unicorn",
+        "eslint-plugin-react"
+      ],
+      "rules": {
+        "@angular-eslint/component-max-inline-declarations": "error",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "ngx",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/contextual-decorator": "error",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "ngx",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/no-attribute-decorator": "error",
+        "@angular-eslint/no-forward-ref": "error",
+        "@angular-eslint/no-lifecycle-call": "error",
+        "@angular-eslint/no-pipe-impure": "error",
+        "@angular-eslint/no-queries-metadata-property": "error",
+        "@angular-eslint/prefer-output-readonly": "error",
+        "@angular-eslint/use-component-view-encapsulation": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+          "off",
+          {
+            "multiline": {
+              "delimiter": "none",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": false
+            }
+          }
+        ],
+        "@typescript-eslint/no-extraneous-class": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-shadow": [
+          "error",
+          {
+            "hoist": "never"
+          }
+        ],
+        "@typescript-eslint/no-this-alias": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unnecessary-type-arguments": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true
+          }
+        ],
+        "@typescript-eslint/prefer-for-of": "off",
+        "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/promise-function-async": "error",
+        "@typescript-eslint/require-await": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
+        "@typescript-eslint/semi": [
+          "off",
+          null
+        ],
+        "@typescript-eslint/strict-boolean-expressions": [
+          "error",
+          {
+            "allowNullable": true
+          }
+        ],
+        "@typescript-eslint/unbound-method": "error",
+        "arrow-parens": [
+          "error",
+          "as-needed"
+        ],
+        "brace-style": [
+          "off",
+          "off"
+        ],
+        "class-methods-use-this": "error",
+        "comma-dangle": [
+          "error",
+          "always-multiline"
+        ],
+        "complexity": [
+          "error",
+          {
+            "max": 20
+          }
+        ],
+        "default-case": "error",
+        "import/no-default-export": "error",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unassigned-import": "off",
+        "import/order": "error",
+        "linebreak-style": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 80
+          }
+        ],
+        "max-lines": [
+          "error",
+          400
+        ],
+        "new-parens": "off",
+        "newline-per-chained-call": "off",
+        "no-duplicate-case": "error",
+        "no-duplicate-imports": "error",
+        "no-extra-bind": "error",
+        "no-extra-semi": "off",
+        "no-invalid-this": "error",
+        "no-irregular-whitespace": "off",
+        "no-new-func": "error",
+        "no-null/no-null": "error",
+        "no-param-reassign": "off",
+        "no-plusplus": "error",
+        "no-redeclare": "error",
+        "no-restricted-syntax": [
+          "error",
+          "ForInStatement"
+        ],
+        "no-return-await": "error",
+        "no-sequences": "error",
+        "no-sparse-arrays": "error",
+        "no-template-curly-in-string": "error",
+        "no-trailing-spaces": "off",
+        "no-useless-constructor": "error",
+        "no-void": "error",
+        "padding-line-between-statements": [
+          "off",
+          {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "return"
+          }
+        ],
+        "prefer-object-spread": "error",
+        "prefer-template": "error",
+        "radix": "off",
+        "react/jsx-curly-spacing": "off",
+        "react/jsx-equals-spacing": "off",
+        "react/jsx-tag-spacing": [
+          "off",
+          {
+            "afterOpening": "allow",
+            "closingSlash": "allow"
+          }
+        ],
+        "react/jsx-wrap-multilines": "off",
+        "space-in-parens": [
+          "off",
+          "never"
+        ],
+        "unicorn/filename-case": "error",
+        "yoda": "error"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "rules": {
+        "@angular-eslint/template/conditional-complexity": "error",
+        "@angular-eslint/template/cyclomatic-complexity": "error",
+        "@angular-eslint/template/i18n": "off",
+        "@angular-eslint/template/no-call-expression": "error",
+        "@angular-eslint/template/use-track-by-function": "error"
+      }
+    }
+  ]
+}
