@@ -4,8 +4,8 @@ import { BarService } from './bar/bar.service';
 
 @Injectable({ providedIn: 'root' })
 export class NgxProgressService {
-  private readonly endEmitter = new Subject();
-  private readonly startEmitter = new Subject();
+  private readonly endEmitter = new Subject<void>();
+  private readonly startEmitter = new Subject<void>();
 
   /**
    * Tells if bar is enabled or not
