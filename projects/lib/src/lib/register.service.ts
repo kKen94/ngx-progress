@@ -11,7 +11,7 @@ export class RegisterService {
    */
   registerBar(newBar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.forEach(bar => {
-      // tslint:disable-next-line:ban-ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // TODO: verificare errore sottostante
       bar.nativeElement['style']['display'] = 'none';
@@ -26,7 +26,7 @@ export class RegisterService {
   unregisterBar(bar: ElementRef<NgxProgressComponent>): void {
     this.existingBars.splice(this.existingBars.indexOf(bar), 1);
     if (this.existingBars.length) {
-      // tslint:disable-next-line:ban-ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       this.existingBars[this.existingBars.length - 1].nativeElement['style'][
         'display'

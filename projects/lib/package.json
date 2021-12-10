@@ -1,6 +1,6 @@
 {
   "name": "@kken94/ngx-progress",
-  "version": "2.2.0",
+  "version": "2.3.1",
   "description": "The most powerful and customizable progress bar for Angular ✨",
   "license": "MIT",
   "homepage": "https://kken94.github.io/ngx-progress/",
@@ -37,7 +37,7 @@
   ],
   "peerDependencies": {
     "@angular/core": "~13.1.0",
-    "rxjs": "~6.6.3"
+    "rxjs": "~7.4.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"

@@ -4,13 +4,13 @@ import { BarService } from './bar/bar.service';
 
 @Injectable({ providedIn: 'root' })
 export class NgxProgressService {
-  private readonly endEmitter = new Subject();
-  private readonly startEmitter = new Subject();
+  private readonly endEmitter = new Subject<void>();
+  private readonly startEmitter = new Subject<void>();
 
   /**
    * Tells if bar is enabled or not
    */
-  // tslint:disable-next-line:variable-name
+  // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
   private _isEnable = true;
   get isEnable(): boolean {
     return this._isEnable;

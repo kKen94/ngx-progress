@@ -20,6 +20,15 @@
               "tsConfig": "projects/lib/tsconfig.lib.prod.json"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/lib/**/*.ts",
+              "projects/lib/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -85,6 +94,15 @@
             }
           }
         },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/demo/**/*.ts",
+              "projects/demo/**/*.html"
+            ]
+          }
+        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
@@ -107,6 +125,7 @@
   },
   "defaultProject": "lib",
   "cli": {
-    "analytics": "caeef3a2-8934-46b6-b462-f73e129527e6"
+    "analytics": "caeef3a2-8934-46b6-b462-f73e129527e6",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
