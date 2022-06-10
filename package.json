@@ -80,7 +80,7 @@
     "pretty-quick": "^3.0.2",
     "replace-json-property": "^1.6.3",
     "sass": "^1.37.5",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.3",
     "stylelint": "^14.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
